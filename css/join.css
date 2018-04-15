@@ -1,0 +1,54 @@
+.join {
+    position: relative;
+    top: 212px;
+    left: 292px;
+    text-align: center;
+  
+    color: #fff;
+}
+
+.join h2 {
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 53px;
+}
+
+.join form {
+    /* position: absolute; */
+    left: 292px;
+    top: 53px;
+   
+}
+.join form input {
+    width: 367px;
+    height: 50px;
+    background-color: #dedede;
+    border-radius: 8px;
+    border: 2px solid #D5D5D5;
+}
+
+.mg_bottom {
+    margin-bottom: 39px;
+}
+
+.join form:nth-child(3) {
+    margin-bottom: 47px;
+}
+
+textarea {
+    
+   
+    width: 367px;
+    height: 224px;
+    background-color: #dedede;
+    border-radius: 8px;
+    border: 2px solid #D5D5D5;
+    /* top: 212px;
+    left: 719px; */
+}
+
+.submit {
+    width: 235px;
+    height: 62px;
+    margin-bottom: 0;
+}

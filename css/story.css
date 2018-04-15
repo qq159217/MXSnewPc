@@ -1,0 +1,39 @@
+.story {
+    position: relative;
+    top: 135px;
+    padding-left: 83px;
+}
+
+.story .fl {
+    width: 209px;
+    margin-right: 100px;
+}
+
+.top {
+    /* position: absolute;
+    top: 135px;
+    left: 83px; */
+}
+
+.bot {
+    position: relative;
+    top: 10px;
+    left: 144px;
+   
+}
+
+.story .fr {
+    height: 568px;
+    /* width: 965px; */
+    border: blue solid 2px;
+    margin-top: 24px;
+    margin-left: 31px;
+    position: absolute;
+    left: 401px;
+  
+}
+
+.story .fr img {
+    width: 459px;
+    height: 447px;
+}

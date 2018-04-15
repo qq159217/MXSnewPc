@@ -1,0 +1,569 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    font-family: '思源黑体';
+}
+
+.mxs_container {
+    width: 1366px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.homepagebj,
+.joinbj,
+.feedbackbj,
+.conpanybj,
+.warebj {
+    background-size: cover;
+    background-position: center center;
+}
+
+.homepagebj {
+    opacity: 1;
+    background-image: url("http://47.98.164.44:9999/bg/banner.png");
+}
+
+.joinbj {
+    opacity: 1;
+    background-image: url("http://47.98.164.44:9999/bg/ball.png");
+}
+
+.feedbackbj {
+    opacity: 1;
+    background-image: url("http://47.98.164.44:9999/bg/feedback.png");
+}
+
+.conpanybj {
+    opacity: 1;
+    background-image: url("http://47.98.164.44:9999/bg/ball.png");
+}
+
+.warebj {
+    opacity: 1;
+    background-image: url("../images/coffeetree.png");
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+/* 导航栏样式 */
+
+nav a {
+    text-decoration: none;
+}
+
+nav>ul>li {
+    float: left;
+    text-align: center;
+}
+
+nav li ul.sub-menu {
+    display: none;
+    padding-left: 0 !important;
+}
+
+.sub-menu li {
+    color: #373A39;
+}
+
+ul {
+    list-style: none;
+}
+
+.item .sub-menu li {
+    margin-top: 16px;
+}
+
+/* 后加的 */
+
+.topNav {
+    width: 100%;
+    height: 68px;
+    z-index: 2000;
+}
+
+.topNav-fixed {
+    width: 100%;
+    position: fixed;
+}
+
+.topNav .menu .fl .logo {
+    float: left;
+    display: block;
+    width: 49px;
+    height: 46px;
+    margin: 10px 0 12px 35px;
+}
+
+.topNav .menu .fl p {
+    margin: 18px 0 0 12px;
+    font-size: 24px;
+    color: #357B8B;
+    height: 37px;
+    line-height: 33px;
+    display: block;
+}
+
+.topNav .menu a:hover {
+    color: #6db3fa;
+    display: block;
+    border-bottom: 5px solid #50E3C2;
+    text-align: center;
+}
+
+.menu .item {
+    height: 17px;
+    font-size: 12px;
+    float: left;
+    margin-right: 91px;
+    margin-top: 28px;
+    color: #50e3c2;
+}
+
+.menu :last-child {
+    margin-right: auto;
+}
+
+.topNav .menu .item a {
+    color: #373A39;
+}
+
+/*  */
+
+/* todo  滚动页面 */
+
+.mxs-container .section {
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    _zoom: 1;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 68px;
+}
+
+.mxs-container .section .container {
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+.section-01,
+.section-02,
+.section-03,
+.section-04,
+.section-05,
+.section-06,
+.section-07 {
+    top: 68px;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* homepage */
+
+.mxs-container .section-01 {
+    top: 0;
+    right: 0;
+}
+
+.section-01 .homePage {
+    position: relative;
+    /* left: 242px; */
+    top: 13.13rem;
+    /* width: 888px; */
+    /* height: 234px; */
+    /* color: #26E5FF; */
+    text-align: center;
+}
+
+.section-01 .homePage h1 {
+    color: #26E5FF;
+    font-size: 95px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.section-01 .homePage p {
+    color: #373A39;
+    font-size: 16px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    position: relative;
+}
+
+/* CompanyProfile 公司简介  */
+
+.section-02 .conpanyContent {
+    margin-top: 82px;
+}
+
+.section-02 .conpanyContent .conName {
+    font-weight: 400;
+    /* margin-top: 82px; */
+    margin-left: 42px;
+    text-align: left;
+}
+
+.section-02 .conpanyContent .l {
+    padding: 85px 0 0 172px;
+    background-color: #fff;
+    width: 36.19rem;
+    height: 34.5rem;
+    margin-top: 111px;
+    box-sizing: border-box;
+    margin-right: 101px;
+    padding-top: 157px;
+}
+
+.section-02 .conpanyContent .r {
+    text-indent: 10px;
+    float: left;
+    background-color: #F6F8FA;
+    width: 37.06 rem;
+    height: 35.38rem;
+    padding: 6.06rem 3.25rem 8.5rem 2.38rem;
+    margin-top: 8.38rem;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+.section-02 .conpanyContent .r input {
+    display: block;
+    width: 128px;
+    height: 47px;
+    border-radius: 8px;
+    background-color: rgb(201, 255, 255);
+    box-shadow: 5px 4px 12px 0px rgba(161, 161, 161, 0.5), inset -2px -2px 5px 0px rgba(1, 200, 196, 1);
+    margin: 30rem 0 0 27.25rem;
+}
+
+.section-02 .conpanyContent .l a {
+    display: block;
+    height: 3.13rem;
+    line-height: 3.13rem;
+    text-align: left;
+    color: rgb(0, 1, 1);
+    /* position: relative; */
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/*  productDescription 产品介绍*/
+
+.section-03 {
+    padding: 0 0 0 95px;
+    box-sizing: content-box;
+}
+
+.section-03 .container .proLeft,
+.section-03 .container .proMid,
+.section-03 .container .proRight {
+    float: left;
+    /* width: 372px; */
+    margin-right: 36px;
+    margin-top: 100px;
+}
+
+.section-03 .container {
+    height: 43.26rem;
+    width: 100%;
+}
+
+.wareEn {
+    height: 60px;
+    line-height: 50px;
+    color: rgb(125, 125, 125);
+    font-size: 36px;
+    text-align: center;
+}
+
+.tit {
+    height: 60px;
+    line-height: 50px;
+    color: rgb(0, 0, 0, 1);
+    font-size: 36px;
+    text-align: center;
+    font-family: PingFangSC-Semibold;
+}
+
+.section-03 .proContent {
+    padding: 0 20px;
+    box-sizing: content-box;
+    width: 265px;
+    height: 281px;
+    opacity: 0.62;
+    border-radius: 37px;
+    background-color: rgb(0, 0, 0);
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 20px;
+    /* margin-right: 36px; */
+}
+
+.section-03 tit {
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    text-align: center;
+    font-family: PingFangSC-Semibold;
+}
+
+.section-03 .line {
+    width: 51px;
+    height: 4px;
+    border: 4px solid rga(252, 187, 8);
+}
+
+/* joinCooperation   */
+
+.section-04 {
+    background: url("../images/jion.png") no-repeat center;
+    background-size: cover;
+    background-position: center center;
+}
+
+.section-04 span {
+    width: 4px;
+    height: 99px;
+    display: block;
+    background-color: #FF09FF;
+}
+
+.section-04 .joinTitle {
+    position: relative;
+    left: 586px;
+    top: 400px;
+    width: 144px;
+    height: 50px;
+    line-height: 50px;
+    color: rgb(255, 255, 2551);
+    font-size: 36px;
+    text-align: center;
+    font-family: PingFangSC-Medium;
+}
+
+.section-04 .joinTitle a {
+    display: block;
+    /* width: 144px; */
+    left: 541px;
+    top: 396px;
+    width: 235px;
+    height: 62px;
+    border-radius: 8px;
+    background-color: rgb(255, 9, 255);
+    box-shadow: 4px 5px 10px 0px rgba(93, 93, 93, 0.5);
+    /* padding: 4px 46px 8px 45px; */
+}
+
+.section-04 .joinPhone p {
+    left: 951px;
+    top: 586px;
+    width: 289px;
+    height: 33px;
+    line-height: 33px;
+    color: rgba(39, 121, 177);
+    font-size: 24px;
+    text-align: center;
+}
+
+.
+/* feedBack */
+
+.mxs-container .section-05 {
+    top: 0;
+    right: 0;
+    background: url("../images/feedback.png") no-repeat center;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
+}
+
+.section-05 .container {
+    padding: 8.15rem 0 0 15.31rem;
+}
+
+.section-05 .feedBack h2 {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 36px;
+    text-align: left;
+}
+
+.section-05 .feedBack .left,
+.section-05 .feedBack .right {
+    margin-top: 24px;
+    width: 414px;
+    height: 350px;
+    box-sizing: border-box;
+    opacity: 0.3;
+    border-radius: 30px;
+}
+
+.section-05 .feedBack .left textarea {
+    height: 100%;
+    width: 100%;
+    /* padding: 10px; */
+    font-size: 16px;
+    color: #fff;
+    text-indent: 40px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 1);
+    outline: none;
+    /* todo  透明度问题 没有解决  */
+}
+
+.section-05 .feedBack .right {
+    background-color: red;
+    margin-left: 44px;
+    padding: 36px 0 0 36px;
+}
+
+.section-05 .feedBack .right .ipt {
+    width: 334px;
+    text-align: left;
+    border-bottom: 1px solid #FFf;
+    margin-top: 26px;
+    color: #FFD2D2D2;
+}
+
+.section-05 .feedBack .right .ipt:nth-child(1) {
+    margin-top: 0;
+}
+
+/* input placeholder 样式 */
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #FFD2D2D2;
+    font-size: 12px;
+    height: 17px;
+    line-height: 17px;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #FFD2D2D2;
+    font-size: 12px;
+    height: 17px;
+    line-height: 17px;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #FFD2D2D2;
+    font-size: 12px;
+    height: 17px;
+    line-height: 17px;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #FFD2D2D2 !important;
+    font-size: 12px;
+    height: 17px;
+    line-height: 17px;
+}
+
+.feedBack .right .getConnection {
+    background-color: #333333;
+    /* display: inline-block; */
+}
+
+.feedBack .right .getConnection p {
+    height: 17px;
+    line-height: 17px;
+    color: #fff;
+    font-size: 12px;
+    text-align: left;
+    font-family: PingFangSC-Light;
+    margin-top: 46px;
+}
+
+.feedBack .right .getConnection input {
+    color: #6C6C6C;
+    width: 110px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: rgba(50, 255, 255, 1);
+    box-shadow: undefined, inset -6px -4px 5px 0px rgba(255, 255, 255, 0.5);
+    margin-left: 5px;
+}
+
+/* connectioncompany 页面 */
+
+.section-06 .connectCompany .address {
+    position: absolute;
+    width: 767px;
+    top: 68px;
+    height: 700px;
+    background-color: #fff;
+    margin: 50px 0 0 127px;
+}
+
+.section-06 .connectCompany .address h1 {
+    color: rgb(36, 33, 33);
+    font-size: 36px;
+    text-align: left;
+}
+
+.connectCompany .address .line {
+    display: block;
+    width: 59.66px;
+    height: 9.29px;
+    background-color: #FCBB08;
+    margin: 48.7px 0 7px 0;
+}
+
+.section-06 .connectCompany .address p {
+    line-height: 46px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: left;
+    font-family: PingFangSC-Light;
+}
+
+.section-06 .connectCompany .address .tindent {
+    text-indent: 23px;
+}
+
+/* .connectCompany .address :nth-child(4),
+.connectCompany .address :nth-child(5),
+    {
+    margin-left: 24px;
+} */
+
+.connectCompany .address :nth-child(3) {
+    line-height: 0;
+}
+
+.section-06 .connectCompany .addressMap {
+    position: absolute;
+    left: 49rem;
+    top: 68px;
+    /* width: 599px; */
+    height: 43.75rem;
+    background-color: red;
+}

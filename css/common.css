@@ -1,0 +1,79 @@
+/*css初始化*/
+
+html {
+    font-size: 16px;
+}
+
+body,
+ul,
+h1,
+h2,
+p,
+input,
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+    font-family: PingFangSC-Thin;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+input,
+textare,
+button {
+    background: none;
+    outline: none;
+    border: 0px;
+}
+
+.line {
+    width: 51px;
+    height: 4px;
+    background-color: #069CCF;
+}
+
+h2 {
+    line-height: 50px;
+    color: #000101;
+    font-size: 36px;
+    /* text-align: center; */
+    font-family: PingFangSC-Medium;
+    font-weight: bold;
+}
+
+.bot {
+    background-color: #FCBB08;
+}
+
+}

@@ -1,0 +1,69 @@
+.team {
+    position: relative;
+    top: 96px;
+}
+
+.top {
+    padding: 2.56rem 6.69rem 0 0;
+    height: 192px;
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+.top .fl {
+    height: 192px;
+    margin-left: 2.56rem;
+}
+
+.top .fl h2 {
+    height: 34px;
+    font-weight: bold;
+    color: #000000;
+    left: 240px;
+    top: 32px;
+    position: absolute;
+}
+
+.team .line {
+    width: 51px;
+    height: 4px;
+    background-color: #069CCF;
+}
+
+.team .first {
+    left: 214px;
+    top: 17px;
+    position: absolute;
+}
+
+.team .last {
+    background-color: #FCBB08;
+    left: 303px;
+    top: 77px;
+    position: absolute;
+}
+
+.top .fl img {
+    width: 150px;
+    height: 147px;
+    float: left;
+}
+
+.top .fr {
+    /* height: 192px; */
+    font-size: 12px;
+    text-align: left;
+    line-height: 35px;
+    font-family: PingFangSC-Light;
+    color: #000000;
+}
+
+.bot img {
+    height: 361px;
+    width: 85.38rem;
+}
+
+. mxs_container {
+    width: 85.38rem;
+}
+
