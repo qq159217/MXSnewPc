@@ -57,12 +57,6 @@ button {
     border: 0px;
 }
 
-.line {
-    width: 51px;
-    height: 4px;
-    background-color: #069CCF;
-}
-
 h2 {
     line-height: 50px;
     color: #000101;
@@ -76,3 +70,8 @@ h2 {
     background-color: #FCBB08;
 }
 
+.line {
+    width: 51px;
+    height: 4px;
+    background-color: #069CCF;
+}

@@ -1,16 +1,12 @@
 $(document).ready(function () {
-  $('#box').fullpage({
+  $('#dowebok').fullpage({
     navigation: true,
     css3: true,
-    // verticalCentered: ture,
-    scrollingSpeed: 800,
-    // menu: false,
-    anchors: ['homePage', 'CompanyProfile', 'productDescription', 'joinCooperation', 'feedBack'],
-    // menu: '#box',
-    // loopBottom: true,
-    // scrollOverflow: true,
 
-    sectionsColor: ['#ccc', '#4BBFC3', '#aadd', '#f90', '#ccc', '#fff'],
+    scrollingSpeed: 800,
+
+    anchors: ['homePage', 'CompanyProfile', 'productDescription', 'joinCooperation', 'feedBack'],
+
+
     afterLoad: function (anchorLink, index) {}
   })
-})

@@ -186,8 +186,8 @@ todo 滚动页面 */ .container {
     top: 0;
     right: 0;
     /* padding-left: 5%; */
-    background: url("../images/homepage/B3208A2C-7538-4756-B94D-C396E24D8E34@1x.png") no-repeat center;
-    background-size: cover;
+    /* background: url("../images/homepage/B3208A2C-7538-4756-B94D-C396E24D8E34@1x.png") no-repeat center;
+    background-size: cover; */
 }
 
 .section-01 .homePage {
