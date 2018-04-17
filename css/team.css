@@ -37,7 +37,7 @@
 }
 
 .team .last {
-    background-color: #FCBB08;
+  
     left: 303px;
     top: 77px;
     position: absolute;
@@ -59,7 +59,7 @@
 }
 
 .bot img {
-    height: 361px;
+    /* height: 361px; */
     width: 85.38rem;
 }
 

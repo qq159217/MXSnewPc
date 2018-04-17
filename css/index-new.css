@@ -337,14 +337,14 @@ ul {
     width: 370px;
     height: 55px;
     line-height: 55px;
-    border-bottom: 1px solid #86FFFF;
+    border-bottom: 1px solid #ACC3CF;
 }
 
 .feedback .ipt {
     width: 414px;
     height: 350px;
-    background-color: #B986D1 100%;
-    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #4A9083;
     border-radius: 30px;
     padding-left: 20px;
     opacity: 1;
@@ -357,10 +357,11 @@ ul {
 }
 
 .submit {
+    color: #6A7373;
     width: 110px;
     height: 38px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #32FFFF;
     position: absolute;
     left: 68rem;
     top: 33rem;
@@ -370,11 +371,47 @@ ul {
     width: 441px;
     height: 350px;
     margin-right: 2.75rem;
-    /* background-color: #2362A4; */
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     padding: 15px;
     box-sizing: border-box;
+    border: 1px solid #4A9083;
 }
+
+/* placeholder 默认样式修改 */
+
+::-webkit-input-placeholder {
+    color: #CBC4CF;
+    font-size: 13px;
+}
+
+/* 使用webkit内核的浏览器 */
+
+:-moz-placeholder {
+    color: #CBC4CF;
+    font-size: 13px;
+}
+
+textarea:-moz-placeholder {
+    color: #fff;
+    font-size: 13px;
+}
+
+/* Firefox版本4-18 */
+
+::-moz-placeholder {
+    color: #CBC4CF;
+    font-size: 13px;
+}
+
+/* Firefox版本19+ */
+
+:-ms-input-placeholder {
+    color: #CBC4CF;
+    font-size: 13px;
+}
+
+/* IE浏览器 */
 
 /* 联系我们
  */
