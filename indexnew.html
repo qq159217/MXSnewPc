@@ -17,7 +17,8 @@
 	<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
 	<script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
 	<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
-
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.5&key=78fb78e9faaf9537ce8df294c1d506d0"></script>
+	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
 
 
@@ -277,8 +278,10 @@
 						<p class="tindent"> 招商电话：00000000 </p>
 					</div>
 
-					<div class="right fl" id="dituContent">
-						高德地图 api
+					<div class="fl">
+
+
+						<div id="container"></div>
 					</div>
 				</div>
 			</div>
@@ -311,5 +314,23 @@
 		$('#dowebok').fullpage({
 			// sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
 		});
+	});
+	
+</script>
+
+
+<script type="text/javascript">
+	var map = new AMap.Map("container", {
+		resizeEnable: false,
+		center: [120.095442, 30.310185], //地图中心点
+		zoom: 18
+		//地图显示的缩放级别
+	});
+	var marker = new AMap.Marker({ //添加自定义点标记
+		map: map,
+		position: [120.095442, 30.310185], //基点位置
+		// offset: new AMap.Pixel(-17, -42), //相对于基点的偏移位置
+		draggable: false, //是否可拖动
+		content: '<div class="marker-route marker-marker-bus-from"></div>' //自定义点标记覆盖物内容
 	});
 </script>

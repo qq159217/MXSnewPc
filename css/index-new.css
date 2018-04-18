@@ -149,9 +149,11 @@ ul {
     position: relative;
     width: 100%
 }
+
 .section {
     min-height: 768px;
 }
+
 /* 首页 */
 
 .section-01 .content {
@@ -237,7 +239,6 @@ ul {
 .section-03 .fl_content {
     margin-left: 123px;
 }
-
 
 .section-03 .fl img {
     margin-bottom: 41px;
@@ -511,4 +512,26 @@ textarea:-moz-placeholder {
 .section-06 .left .tindent,
 .section-06 .left .name {
     color: #000;
+}
+
+/* 地图样式 */
+
+.amap-marker .marker-route {
+    position: absolute;
+    width: 40px;
+    height: 44px;
+    color: #e90000;
+    background: url(http://webapi.amap.com/theme/v1.3/images/newpc/poi-1.png) no-repeat;
+    cursor: pointer;
+}
+
+.amap-marker .marker-marker-bus-from {
+    background-position: -334px -180px;
+}
+
+#container {
+    width: 37.44rem;
+    height: 700px;
+    margin-top: 68px;
+    border: 2px solid #ECE5E0;
 }
