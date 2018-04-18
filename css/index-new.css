@@ -227,7 +227,7 @@ ul {
 }
 
 .fr img {
-    height: 700px;
+    /* height: 700px; */
     margin-top: 3px;
     width: 100%;
 }
@@ -241,7 +241,7 @@ ul {
 }
 
 .section-03 .fl img {
-    margin-bottom: 41px;
+    margin-top: -5px;
 }
 
 .section-03 .top {
@@ -270,6 +270,9 @@ ul {
     color: #5092BE;
     margin-bottom: 7px;
     display: block;
+    position: absolute;
+    left: 264px;
+    top: 202px;
 }
 
 .section-03 .line_2 {
@@ -277,6 +280,9 @@ ul {
     height: 2px;
     background-color: #3281B3;
     margin-top: 34px;
+    position: absolute;
+    left: 209px;
+    top: 202px;
 }
 
 .section-03 .mid {
@@ -285,15 +291,65 @@ ul {
 }
 
 .section-03 .line_3 {
-    width: 17px;
-    height: 2px;
+    width: 8px;
+    height: 54px;
     background-color: #084CCF;
+    position: absolute;
+    left: 209px;
+    top: 280px;
+}
+
+.section-03 .mid .txt {
+    position: absolute;
+    left: 238px;
+    top: 273px;
+    line-height: 22px;
+    font-size: 12px;
 }
 
 .section-03 .line_4 {
     width: 8px;
     height: 211px;
     background-color: #9EF6FF;
+    position: absolute;
+    left: 0;
+    top: 125px;
+    margin-right: 19px;
+}
+
+.section-03 .fl .bottom {
+    position: absolute;
+    left: 208px;
+    top: 293px;
+}
+
+.section-03 .fl .bottom a img {
+    display: inline-block;
+    width: 37px;
+    height: 18px;
+    margin-right: 4px;
+}
+
+.section-03 .fl .bottom a h4 {
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 300;
+    color: #000;
+    line-height: 80px;
+}
+
+.section-03 .fl .bottom .bottom_title a {
+    font-size: 34px;
+    font-weight: 400;
+    display: block;
+    margin-left: 19px;
+    /* margin-bottom: 46px; */
+}
+
+.section-03 .fl .bottom .bottom_title {
+    position: relative;
+    left: 0;
+    top: 108px;
 }
 
 /*join 加盟合作 */
@@ -474,10 +530,8 @@ textarea:-moz-placeholder {
 
 .section-06 .left {
     margin-top: 110px;
-    
     margin-left: 7.88rem;
     margin-right: 50px;
-   
     height: 273px;
 }
 
@@ -503,7 +557,6 @@ textarea:-moz-placeholder {
     background-color: #FCBC0D;
     width: 64px;
     height: 12px;
-
 }
 
 .section-06 .left .tindent {
