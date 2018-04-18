@@ -518,10 +518,12 @@ textarea:-moz-placeholder {
 
 .amap-marker .marker-route {
     position: absolute;
-    width: 40px;
-    height: 44px;
-    color: #e90000;
-    background: url(http://webapi.amap.com/theme/v1.3/images/newpc/poi-1.png) no-repeat;
+    width: 54.2px;
+    height: 63.36px;
+    color: #FCBB08;
+    background-image: url("http://47.98.164.44:9999/bg/icon.jpg");
+    /* /* background-repeat: no-repeat; */
+    background-size: 55px auto;
     cursor: pointer;
 }
 
