@@ -15,62 +15,65 @@
     <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
     <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
-
+    <script src="../../js/jquery.slide.min.js"></script>
+    <script src="../../js/tools.js"></script>
 </head>
 
 <body>
     <!-- 顶部导航栏 -->
-    <div class=" topNav topNav-fixed ">
-        <div class="container ">
-            <div class="mxs_container ">
-                <div class="menu " id="menu ">
-                    <div class="fl ">
-                        <img src="../../images/common/logo.png " class="logo fl " />
-                        <p class="fr ">MEASURES</p>
+    <div class="topNav  topNav-fixed">
+        <div class="container">
+            <div class="mxs_container">
+                <div class="menu" id="menu">
+                    <div class="fl">
+                        <img src="http://47.98.164.44:9999/bg/logo.png" class="logo fl" />
+                        <p class="fr">MEASURES</p>
                     </div>
 
-                    <nav class="fr ">
+                    <nav class="fr">
                         <ul>
-                            <li class="item ">
-                                <a href="./index.html ">首页
+                            <li class="item">
+                                <a href="./index.html">首页</a>
 
                             </li>
-                            <li class="item ">
-                                <a href="# ">公司简介
-                                    <ul class="sub-menu ">
-                                        <li class=" ">
-                                            <a href="./site/compony/story.htm ">公司故事</a>
+                            <li class="item">
+                                <a href="#">公司简介
+                                    <ul class="sub-menu">
+                                        <li class="">
+                                            <a href="./site/compony/story.htm">公司故事</a>
                                         </li>
-                                        <li class=" ">
-                                            <a href="./site/compony/team.html ">团队介绍</a>
+                                        <li class="">
+                                            <a href="./site/compony/team.html">团队介绍</a>
                                         </li>
 
                                     </ul>
+                                </a>
                             </li>
-                            <li class="item ">
-                                <a href="# ">产品介绍
-                                    <ul class="sub-menu ">
-                                        <li class=" ">
-                                            <a href="./site/product/machine.html ">机器介绍</a>
+                            <li class="item">
+                                <a href="#">产品介绍
+                                    <ul class="sub-menu">
+                                        <li class="">
+                                            <a href="./site/product/machine.html">机器介绍</a>
                                         </li>
-                                        <li class=" ">
-                                            <a href="./site/product/technology.html ">技术介绍</a>
+                                        <li class="">
+                                            <a href="./site/product/technology.html">技术介绍</a>
                                         </li>
-                                        <li class=" ">
-                                            <a href="./site/product/coffee.html ">咖啡家族</a>
+                                        <li class="">
+                                            <a href="./site/product/coffee.html">咖啡家族</a>
                                         </li>
                                     </ul>
+                                </a>
                             </li>
-                            <li class="item ">
-                                <a href="./site/union/union.html ">加盟合作
+                            <li class="item">
+                                <a href="./site/join/join.htm">加盟合作</a>
 
                             </li>
-                            <li class="item ">
-                                <a href="# ">反馈
+                            <li class="item">
+                                <a href="#">反馈</a>
 
                             </li>
-                            <li class="item ">
-                                <a href="# ">联系我们
+                            <li class="item">
+                                <a href="#">联系我们</a>
 
                             </li>
                         </ul>
@@ -84,48 +87,72 @@
         </div>
     </div>
 
-
     <div class="coffee mxs_container ">
         <div class="top ">
-            <h2 id="title ">好享家族</h2>
+            <h2>好享家族</h2>
             <div class="line "></div>
 
         </div>
         <div class="bottom ">
-            <ul>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-                <li>
-                    <img src="../../images/coffee/卡其经典拿铁.png " alt=" ">
-                    <h4>咖啡名字</h4>
-                </li>
-            </ul>
+            <div id="marquee2">
+                <div class="content">
+                    <ul class="j_slideLists">
+
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/卡其经典拿铁.png" alt="卡其经典拿铁">
+                                <h5>卡其经典拿铁</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/古铜浓郁拿铁.png" alt="卡其经典拿铁">
+                                <h5>古铜浓郁拿铁</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/米兰优选卡布.png" alt="卡其经典拿铁">
+                                <h5>米兰优选卡布</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/粉红棉花糖摩卡 .png" alt="卡其经典拿铁">
+                                <h5>粉红棉花糖摩卡</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/绿野抹茶拿铁 .png" alt="卡其经典拿铁">
+                                <h5>绿野抹茶拿铁</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/蓝调丝绸摩卡.png" alt="卡其经典拿铁">
+                                <h5>蓝调丝绸摩卡</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/醇香牛奶.png" alt="卡其经典拿铁">
+                                <h5>醇香牛奶</h5>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/coffee/黑金醇香美式咖啡.png" alt="卡其经典拿铁">
+                                <h5>黑金醇香美式咖啡</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <a href="javascript:void(0);" target="_self" class="btnPrev j_slidePrev"></a>
+                    <a href="javascript:void(0);" target="_self" class="btnNext j_slideNext"></a>
+                </div>
+            </div>
         </div>
 
 
@@ -172,6 +199,19 @@
         });
     });
 </script>
+<script>
+    $("#marquee2").slide({
+        scrollLen: 1,
+        effect: "scrollx",
+        auto: true,
+        seamless: true,
+        interval: 1000,
+        lazyload: true,
+
+    });
+</script>
+
+
 
 
 

@@ -473,26 +473,26 @@ textarea:-moz-placeholder {
 }
 
 .section-06 .left {
-    margin-top: 132px;
-    padding-top: 20px;
+    margin-top: 110px;
+    
     margin-left: 7.88rem;
-    /* margin-right: 2.13rem; */
-    width: 37.94rem;
+    margin-right: 50px;
+   
     height: 273px;
 }
 
 .section-06 .right {
     margin-top: 68px;
-    width: 37.44rem;
+    width: auto;
     height: 43.75rem;
     border: solid #50e3c2 2px;
 }
 
-.section-o6 .content .left #connect {
+.section-o6 .content .left h3 {
     color: #242121;
     height: 75px;
     line-height: 75px;
-    font-size: 36px;
+    font-size: 40px;
     text-align: left;
     font-family: PingFangSC-Light;
 }
@@ -501,6 +501,9 @@ textarea:-moz-placeholder {
     margin-top: 45px;
     margin-bottom: 21px;
     background-color: #FCBC0D;
+    width: 64px;
+    height: 12px;
+
 }
 
 .section-06 .left .tindent {
@@ -518,12 +521,12 @@ textarea:-moz-placeholder {
 
 .amap-marker .marker-route {
     position: absolute;
-    width: 54.2px;
-    height: 63.36px;
+    width: 56px;
+    height: 60px;
     color: #FCBB08;
-    background-image: url("http://47.98.164.44:9999/bg/icon.jpg");
-    /* /* background-repeat: no-repeat; */
-    background-size: 55px auto;
+    background-image: url("http://47.98.164.44:9999/bg/icon.png");
+    /* background-repeat: no-repeat;  */
+    background-size: 56px 60px;
     cursor: pointer;
 }
 
@@ -532,7 +535,7 @@ textarea:-moz-placeholder {
 }
 
 #container {
-    width: 37.44rem;
+    width: 46.44rem;
     height: 700px;
     margin-top: 68px;
     border: 2px solid #ECE5E0;
