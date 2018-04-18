@@ -472,7 +472,7 @@ ul {
     border-radius: 5px;
     background-color: #32FFFF;
     position: absolute;
-    left: 68rem;
+    left: 65rem;
     top: 33rem;
 }
 
@@ -553,8 +553,7 @@ textarea:-moz-placeholder {
 }
 
 .section-06 .left .line {
-    margin-top: 45px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     background-color: #FCBC0D;
     width: 64px;
     height: 12px;
@@ -562,35 +561,38 @@ textarea:-moz-placeholder {
 
 .section-06 .left .tindent {
     text-indent: 20px;
-    line-height: 30px;
-    height: 30px;
+    height: 48px;
+    /* height: 30px; */
 }
 
 .section-06 .left .tindent,
 .section-06 .left .name {
     color: #000;
+    height: 50px;
 }
 
-/* 地图样式 */
-
-.amap-marker .marker-route {
-    position: absolute;
-    width: 56px;
-    height: 60px;
-    color: #FCBB08;
-    background-image: url("http://47.98.164.44:9999/bg/icon.png");
-    /* background-repeat: no-repeat;  */
-    background-size: 56px 60px;
-    cursor: pointer;
+p#connect {
+    font-size: 36px;
+    font-weight: 400;
+    height: 105px;
 }
-
-.amap-marker .marker-marker-bus-from {
-    background-position: -334px -180px;
-}
-
-#container {
-    width: 46.44rem;
-    height: 700px;
-    margin-top: 68px;
-    border: 2px solid #ECE5E0;
-}
+    /* 地图样式 */
+    .amap-marker .marker-route {
+        position: absolute;
+        width: 56px;
+        height: 60px;
+        color: #FCBB08;
+        background-image: url("http://47.98.164.44:9999/bg/icon.png");
+        /* background-repeat: no-repeat;  */
+        background-size: 56px 60px;
+        cursor: pointer;
+    }
+    .amap-marker .marker-marker-bus-from {
+        background-position: -334px -180px;
+    }
+    #container {
+        width: 46.44rem;
+        height: 700px;
+        margin-top: 68px;
+        border: 2px solid #ECE5E0;
+    }
