@@ -10,7 +10,8 @@ body {
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
     -webkit-transition: all .5s ease;
-    font-family: '思源黑体'
+    font-family: '思源黑体';
+    overflow: hidden;
 }
 
 * {
@@ -39,7 +40,7 @@ body {
 
 .joinbj {
     opacity: 1;
-    background-image: url('http://47.98.164.44:9999/bg/join.png')
+    background-image: url(http://47.98.164.44:9999/bg/join.png)
 }
 
 .feedbackbj {
@@ -219,6 +220,9 @@ ul {
     text-indent: 20PX;
 }
 
+.fl_bottom{
+    position: absolute;
+}
 /* 产品介绍 */
 
 .section-03 .fr {
@@ -576,23 +580,27 @@ p#connect {
     font-weight: 400;
     height: 105px;
 }
-    /* 地图样式 */
-    .amap-marker .marker-route {
-        position: absolute;
-        width: 56px;
-        height: 60px;
-        color: #FCBB08;
-        background-image: url("http://47.98.164.44:9999/bg/icon.png");
-        /* background-repeat: no-repeat;  */
-        background-size: 56px 60px;
-        cursor: pointer;
-    }
-    .amap-marker .marker-marker-bus-from {
-        background-position: -334px -180px;
-    }
-    #container {
-        width: 46.44rem;
-        height: 700px;
-        margin-top: 68px;
-        border: 2px solid #ECE5E0;
-    }
+
+/* 地图样式 */
+
+.amap-marker .marker-route {
+    position: absolute;
+    width: 56px;
+    height: 60px;
+    color: #FCBB08;
+    background-image: url("http://47.98.164.44:9999/bg/icon.png");
+    /* background-repeat: no-repeat;  */
+    background-size: 56px 60px;
+    cursor: pointer;
+}
+
+.amap-marker .marker-marker-bus-from {
+    background-position: -334px -180px;
+}
+
+#container {
+    width: 46.44rem;
+    height: 700px;
+    margin-top: 68px;
+    border: 2px solid #ECE5E0;
+}

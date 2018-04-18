@@ -14,6 +14,9 @@
     <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
     <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
+    <script src="../../js/tools.js"></script>
+
 </head>
 
 <body>
@@ -84,13 +87,13 @@
             <h2>
                 加盟合作
             </h2>
-            <form action="" method="post">
-                <input class="mg_bottom" type="text" placeholder="您的姓名*" name="nickName">
+            <form action="" method="post" id="joinForm">
+                <input class="mg_bottom" type="text" placeholder="您的姓名*" datatype="*" name="nickName">
                 <br>
-                <input type="text" class="mg_bottom" placeholder="您的手机号码*" name="
+                <input type="text" class="mg_bottom" placeholder="您的手机号码*" errormsg="手机号码格式错误" datatype="m" name="
                  phoneNumber">
                 <br>
-                <input type="email" class="mg_bottom" placeholder="您的邮箱*" name="email">
+                <input type="email" class="mg_bottom" placeholder="您的邮箱*" errormsg="邮箱格式错误" datatype="e" name="text">
                 <br>
                 <textarea class="fr" name="advice" id="" cols="30" name="advice" rows="10" placeholder="留言(选填)"></textarea>
                 <button type="submit" class="submit">提交</button>
@@ -111,17 +114,66 @@
 </body>
 
 </html>
-<script type="text/javascript" src="js/jquery-1.8.3.min.js" tppabs="http://www.coffee08.com/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" tppabs="http://www.coffee08.com/js/jquery-ui-1.10.3.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullpage.min.js" tppabs="http://www.coffee08.com/js/jquery.fullpage.min.js"></script>
-<script src="js/segment.min.js" tppabs="http://www.coffee08.com/js/segment.min.js"></script>
-<script src="js/index.js" tppabs="http://www.coffee08.com/js/index.js"></script>
+
 <script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "../hm.baidu.com/hm.js-cbc44401a5119b19b8d6b2111b1d9967" /*tpa=http://hm.baidu.com/hm.js?cbc44401a5119b19b8d6b2111b1d9967*/ ;
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+    $().ready(function () {
+        // 在键盘按下并释放及提交后验证提交表单
+
+        $("#joinForm").validate({
+            rules: {
+
+                nickName: {
+                    required: true,
+                    minlength: 2
+                },
+                phoneNumber: {
+                    required: true,
+                    length: 11
+                },
+
+
+                email: {
+                    required: true,
+                    email: true
+                }
+
+            },
+            messages: {
+
+                nickName: {
+                    required: "请输入姓名",
+                    minlength: "用户名必需由两个字母组成"
+                },
+                phoneNumber: {
+                    required: "请输入您的手机号码",
+
+                },
+
+                email: "请输入一个正确的邮箱",
+
+            }
+        });
+    });
+    <!-- 表单调教 -->
+    let formSubmit = function (id, url) {
+        $('id').click(function () {
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $('#joinForm').serialize(),
+                async: false,
+                error: function (request) {
+                    alert("加盟失败,亲稍后再试");
+                },
+                success: function (data) {
+                    window.location.href = ".././../indexnew.html",
+                        alert("您的信息我们已经收到,请耐心等待");
+                };
+            });
+        });
+    };
+ formSubmit("#joinForm","http://47.98.164.44:8081/joinUs/addJoiner");
+
+
+    })
 </script>
