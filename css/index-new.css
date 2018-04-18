@@ -149,24 +149,34 @@ ul {
     position: relative;
     width: 100%
 }
-
+.section {
+    min-height: 768px;
+}
 /* 首页 */
 
 .section-01 .content {
     text-align: center;
-    background-color: #fff];
 }
 
 .homepage h1 {
     font-size: 100px;
     line-height: 138px;
-    height: 140px;
+    height: 50px;
     color: #26E5FF;
+    display: block;
+    position: absolute;
+    top: 13.31rem;
+    left: 25.31rem;
+    margin-bottom: 21px;
 }
 
 .homepage p {
+    display: block;
     font-size: 16px;
     height: 37px;
+    position: absolute;
+    top: 13.31rem;
+    left: 28.31rem;
 }
 
 /* 公司简介 */
@@ -211,7 +221,7 @@ ul {
 
 .section-03 .fr {
     width: 664px;
-    margin-top: 68px;
+    /* margin-top: 68px; */
 }
 
 .fr img {
@@ -220,28 +230,69 @@ ul {
     width: 100%;
 }
 
-.section-03.fl {
+.section-03 .fl {
     width: 627px;
 }
 
-.section-03 .bottom {
-    margin-top: 62px;
+.section-03 .fl_content {
+    margin-left: 123px;
 }
 
-.section-03 .bottom .title {
-    margin-top: 118px;
+
+.section-03 .fl img {
+    margin-bottom: 41px;
 }
 
-.section-03 .top>.line {
+.section-03 .top {
+    /* width: 318px;
+    height: 87px; */
+    vertical-align: middle;
+    /* text-align: center; */
+}
+
+.section-03 .line_1 {
     width: 8px;
     height: 47px;
     background-color: #069CCF;
+    margin-right: 16px;
 }
 
-.section-03 .title .line {
+.section-03 .top h2 {
+    width: 188px;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.section-03 .top h4 {
+    font-size: 23px;
+    font-weight: 300;
+    color: #5092BE;
+    margin-bottom: 7px;
+    display: block;
+}
+
+.section-03 .line_2 {
+    width: 53px;
+    height: 2px;
+    background-color: #3281B3;
+    margin-top: 34px;
+}
+
+.section-03 .mid {
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+.section-03 .line_3 {
+    width: 17px;
+    height: 2px;
+    background-color: #084CCF;
+}
+
+.section-03 .line_4 {
     width: 8px;
     height: 211px;
-    background: #97EBF3;
+    background-color: #9EF6FF;
 }
 
 /*join 加盟合作 */
