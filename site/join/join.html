@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="../../css/common.css" />
     <link rel="stylesheet" href="../../css/join.css" />
     <link rel="stylesheet" type="text/css" href="../../css/index.css" />
-    <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet">
+    <!-- <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet"> -->
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
-    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script> -->
     <script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
-    <script src="../../js/tools.js"></script>
+    <!-- <script src="../../js/tools.js"></script> -->
 
 </head>
 
@@ -82,27 +82,105 @@
     </div>
     </div>
     </div>
-    <div class="full">
-        <div class="join mxs_container">
+    <div class="full joinbj">
+        <div class="join mxs_container ">
             <h2>
                 加盟合作
             </h2>
-            <form action="" method="post" id="joinForm">
-                <input class="mg_bottom" type="text" placeholder="您的姓名*" datatype="*" name="nickName">
+            <form id="joinForm">
+                <input type="text " placeholder="您的姓名* " datatype="*" name="userName ">
                 <br>
-                <input type="text" class="mg_bottom" placeholder="您的手机号码*" errormsg="手机号码格式错误" datatype="m" name="
-                 phoneNumber">
+                <input type="text" placeholder="您的手机号码* " errormsg="手机号码格式错误 " datatype="m " name=" phoneNumber ">
                 <br>
-                <input type="email" class="mg_bottom" placeholder="您的邮箱*" errormsg="邮箱格式错误" datatype="e" name="text">
+                <input type="email" placeholder="您的邮箱*" errormsg="邮箱格式错误 " datatype="e " name="email ">
                 <br>
-                <textarea class="fr" name="advice" id="" cols="30" name="advice" rows="10" placeholder="留言(选填)"></textarea>
-                <button type="submit" class="submit">提交</button>
+                <textarea class="fr " id=" " cols="30 " name="message " rows="10 " placeholder="留言(请在此留下您的宝贵 *必填) "></textarea>
+                <button id="submitJoin"  class="submit" type="submit">提交</button>
+                <!-- <button type=" " class="" id="btn">提交</button> -->
             </form>
+
         </div>
     </div>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+
+
+        // <!-- 表单提交 -->
+        // 获取表单数据
+        // function formToString(formObj) {
+        //     var allStr = "";
+        //     if (formObj) {
+        //         var elementsObj = formObj.elements;
+        //         var obj;
+        //         if (elementsObj) {
+        //             for (var i = 0; i < elementsObj.length; i += 1) {
+        //                 obj = elementsObj[i];
+        //                 if (obj.name != undefined && obj.name != "") {
+        //                     allStr += "&" + obj.name + "=" + encodeURIComponent(obj.value);
+        //                 }
+        //             }
+        //         } else {
+        //             alert("没有elements对象!");
+        //             return;
+        //         }
+        //     } else {
+        //         alert("form不存在!");
+        //         return;
+        //     }
+        //     return allStr;
+        // }
+        // formToString("#joinForm")
+
+        $('#submitJoin').click(function () {
+            $.ajax({
+                type: 'post',
+                url: "http://47.98.164.44:8081/joinUs/addJoiner",
+                dataType: 'json',
+                data: {
+                    userName: "aaaaaa",
+                    phoneNumber: "13555548392",
+                    email: "cml123@126.com",
+                    message: "加盟者留言，反馈信息，加盟方式等内容"
+                },
+                cache: false,
+                async: true,
+                error: function (request) {
+                    console.log('加盟失败 ')
+                },
+                success: function (data) {
+                    // window.location.href = ".././../indexnew.html",
+                    alert("您的信息我们已经收到,请耐心等待 ");
+                    consol.log(data + '提交成功')
+                }
+            });
+            console.log(" 测试 代码")
+
+        });
+
+
+
+
+    });
+
+
+
+
+    //})
+</script>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
         $('nav>ul .item').mouseenter(function () {
@@ -110,70 +188,4 @@
             $(this).siblings().find('.sub-menu').hide()
         })
     });
-</script>
-</body>
-
-</html>
-
-<script>
-    $().ready(function () {
-        // 在键盘按下并释放及提交后验证提交表单
-
-        $("#joinForm").validate({
-            rules: {
-
-                nickName: {
-                    required: true,
-                    minlength: 2
-                },
-                phoneNumber: {
-                    required: true,
-                    length: 11
-                },
-
-
-                email: {
-                    required: true,
-                    email: true
-                }
-
-            },
-            messages: {
-
-                nickName: {
-                    required: "请输入姓名",
-                    minlength: "用户名必需由两个字母组成"
-                },
-                phoneNumber: {
-                    required: "请输入您的手机号码",
-
-                },
-
-                email: "请输入一个正确的邮箱",
-
-            }
-        });
-    });
-    <!-- 表单调教 -->
-    let formSubmit = function (id, url) {
-        $('id').click(function () {
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $('#joinForm').serialize(),
-                async: false,
-                error: function (request) {
-                    alert("加盟失败,亲稍后再试");
-                },
-                success: function (data) {
-                    window.location.href = ".././../indexnew.html",
-                        alert("您的信息我们已经收到,请耐心等待");
-                };
-            });
-        });
-    };
- formSubmit("#joinForm","http://47.98.164.44:8081/joinUs/addJoiner");
-
-
-    })
 </script>

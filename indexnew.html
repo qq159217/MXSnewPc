@@ -31,7 +31,7 @@
 					<nav class="fr">
 						<ul>
 							<li class="item">
-								<a href="./index.html">首页</a>
+								<a href="./indexnew.html">首页</a>
 							</li>
 							<li class="item">
 								<a href="#">公司简介
@@ -141,17 +141,17 @@
 								<div class="line_4 fl"></div>
 
 								<div class="bottom_title">
-									<a href="./site/product/coffee.htm">
+									<a href="./site/product/machine.html">
 										<h4>机器简介</h4>
 										<img src="./images/arrow.png"></img>
 									</a>
 
-									<a href="./site/product/coffee.htm">
+									<a href="./site/product/technology.html">
 										<h4>技术简介</h4>
 										<img src="./images/arrow.png"></img>
 									</a>
 
-									<a href="./site/product/coffee.htm">
+									<a href="./site/product/technology.html">
 										<h4>咖啡家族</h4>
 										<img src="./images/arrow.png"></img>
 									</a>
@@ -203,9 +203,9 @@
 							<div class="ipt fl">
 								<input type="text" placeholder="您的姓名*" name="nickName">
 								<br>
-								<input type="text" placeholder="您的手机号码*" name="phoneNumber">
+								<input type="text" placeholder="您的手机号码*" name="phoneNumber"  required>
 								<br>
-								<input type="email" placeholder="您的邮箱*" name="email">
+								<input type="email" placeholder="您的邮箱*" name="email"  required>
 								<br>
 								<input type="email" placeholder="您的qq" name="qqNumber">
 								<br>
@@ -245,6 +245,10 @@
 	$(document).ready(function () {
 		$('nav>ul .item').mouseenter(function () {
 			$(this).find('.sub-menu').show();
+			// $(this).siblings().find('.sub-menu').hide()
+		});
+		$('nav>ul .item').mouseleave(function () {
+			// $(this).find('.sub-menu').show();
 			$(this).siblings().find('.sub-menu').hide()
 		});
 		$('#dowebok').fullpage({

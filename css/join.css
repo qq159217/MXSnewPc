@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+.joinbj {
+    opacity: 1;
+    background-image: url(http://47.98.164.44:9999/bg/join.png)
+}
+
 .join h2 {
     color: #666;
     font-weight: bold;

@@ -10,8 +10,13 @@ body {
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
     -webkit-transition: all .5s ease;
-    font-family: '思源黑体';
+    font-family: 'PingFangSC-Thin';
     overflow: hidden;
+}
+
+@font-face {
+    font-family: 'PingFangSC-Thin';
+    src: url('../fonts/PingFang Light.ttf'), url('../fonts/PingFang Bold.ttf'), url('../fonts/PingFang 简细.ttf');
 }
 
 * {
@@ -22,6 +27,7 @@ body {
 .mxs_container {
     width: 1366px;
     margin: 0 auto;
+    position: relative;
 }
 
 .conpanybj,
@@ -159,6 +165,7 @@ ul {
 
 .section-01 .content {
     text-align: center;
+    text-align: center;
 }
 
 .homepage h1 {
@@ -167,9 +174,9 @@ ul {
     height: 50px;
     color: #26E5FF;
     display: block;
-    position: absolute;
-    top: 13.31rem;
-    left: 25.31rem;
+    position: relative;
+    top: -70px;
+    /* left: 27.31rem; */
     margin-bottom: 21px;
 }
 
@@ -177,9 +184,9 @@ ul {
     display: block;
     font-size: 16px;
     height: 37px;
-    position: absolute;
-    top: 13.31rem;
-    left: 28.31rem;
+    position: relative;
+    /* top: 13.31rem;
+    left: 28.31rem; */
 }
 
 /* 公司简介 */
@@ -220,9 +227,10 @@ ul {
     text-indent: 20PX;
 }
 
-.fl_bottom{
+.fl_bottom {
     position: absolute;
 }
+
 /* 产品介绍 */
 
 .section-03 .fr {
@@ -599,8 +607,9 @@ p#connect {
 }
 
 #container {
-    width: 46.44rem;
+    width: 730px;
     height: 700px;
     margin-top: 68px;
     border: 2px solid #ECE5E0;
+    overflow: hidden;
 }
