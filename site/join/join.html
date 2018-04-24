@@ -99,7 +99,7 @@
                 <input type="email" class="mg_bottom" placeholder="您的邮箱*" name="email">
                 <br>
                 <textarea class="fr" name="advice" id="" cols="30" name="advice" rows="10" placeholder="留言(选填)"></textarea>
-                <button type="submit" class="submit">提交</button>
+                <button type="submit" class="submit" id="feedbacksubmit">提交</button>
             </form>
         </div>
     </div>
@@ -108,8 +108,10 @@
 </html>
 
 <script>
-    // 需求 获取表单的name 值,以及value 值,然后使用&拼接在一起
-
-    //加
-    // 获取表单值
+   $(document).ready(function () {
+       $("#feedbacksubmit").click(function() {
+         window.location = "../submit_success/submitSucseccfully.html";
+         console.log("哈哈");
+       })
+   })
 </script>

@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.5&key=78fb78e9faaf9537ce8df294c1d506d0"></script>
 	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
-	<script src="./js/tools.js"></script>
+	<!-- <script src="./js/tools.js"></script> -->
 	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 </head>
 
@@ -27,7 +27,7 @@
 			<div class="mxs_container">
 				<div class="menu" id="menu">
 					<div class="fl">
-						<img src="http://47.98.164.44:9999/bg/logo.png" class="logo fl" />
+						<img src="./images/common/logo.png" class="logo fl" />
 						<p class="fr">MEASURES</p>
 					</div>
 					<nav class="fr">
@@ -39,7 +39,7 @@
 								<a href="#">公司简介
 									<ul class="sub-menu">
 										<li class="">
-											<a href="./site/compony/story.htm">公司故事</a>
+											<a href="./site/compony/story.html">公司故事</a>
 										</li>
 										<li class="">
 											<a href="./site/compony/team.html">团队介绍</a>
@@ -93,7 +93,7 @@
 				<div class="content">
 					<h3>杭州米修斯科技有限公司</h3>
 					<div class="fl">
-						<img src="http://47.98.164.44:9999/bg/ball-half.png" alt="">
+						<img src="http://47.98.164.44/bg/ball-half.png" alt="">
 						<!-- <div class="fl_bottom">
 							<a href="./site/compony/story.htm">
 								<h4>公司故事</h4>
@@ -121,7 +121,7 @@
 			<div class="mxs_container">
 				<div class="content">
 					<div class="fl">
-						<img src="http://47.98.164.44:9999/bg/ball_bottom.png" alt="">
+						<img src="/images/bj/ball_bottom.png">
 						<div class="fl_content">
 							<div class="top fl">
 								<div class="line_1 fl"></div>
@@ -166,7 +166,7 @@
 
 					</div>
 					<div class="fr">
-						<img src="http://47.98.164.44:9999/prod_introduce/machine/coffeemaker.png" alt=""> </div>
+						<img src="http://47.98.164.44/prod_introduce/machine/coffeemaker.png" alt=""> </div>
 				</div>
 			</div>
 		</section>
@@ -175,7 +175,7 @@
 			<div class="mxs_container">
 				<div class="content">
 					<div class="join">
-						<img src="http://47.98.164.44:9999/bg/ball.png" alt="">
+						<img src="./images/bj/ball.png" alt="">
 						<a href="./site/join/join.html">
 							<h3>加盟合作</h3>
 						</a>
@@ -201,23 +201,24 @@
 						</h2>
 						<form class="" id="feedbackForm" method="post">
 							<div class="fl">
-								<textarea class="" name="advice" id="" cols="30" name="advice" rows="10" placeholder="请在此留下您的宝贵意见"></textarea>
+								<textarea class="" name="advice" id="advice" cols="30" name="advice" rows="10" placeholder="请在此留下您的宝贵意见"></textarea>
 							</div>
 							<div class="ipt fl">
-								<input type="text" placeholder="您的姓名*" name="nickName">
+								<input type="text" placeholder="您的姓名*" name="nickName" id="nickName">
 								<br>
-								<input type="text" placeholder="您的手机号码*" name="phoneNumber" required>
+								<input type="text" placeholder="您的手机号码*" name="phoneNumber" id="phoneNumber" required>
 								<br>
-								<input type="email" placeholder="您的邮箱*" name="email" required>
+								<input type="email" placeholder="您的邮箱*" name="email" id="email" required>
 								<br>
-								<input type="email" id="email" placeholder="您的qq" name="qqNumber">
+								<input type="email" id="email" placeholder="您的qq" name="qqNumber" id="qqNumber">
 								<br>
-								<input type="email" placeholder="您的微信" name="weChat">
+								<input type="email" placeholder="您的微信" name="weChat" id="wechat">
+								<input type="text" id="hide" name="token">
+								
 								<div>
 									<p class="message">工作人员将尽快与您取得联系( 三个工作日内)</p>
 								</div>
 								<button type="submit" id="feedbackBtn" class="submit">提交</button>
-								<input type="text" name="token" id="hide" value="">
 							</div>
 						</form>
 					</div>
@@ -249,10 +250,8 @@
 	$(document).ready(function () {
 		$('nav>ul .item').mouseenter(function () {
 			$(this).find('.sub-menu').show();
-			// $(this).siblings().find('.sub-menu').hide()
 		});
 		$('nav>ul .item').mouseleave(function () {
-			// $(this).find('.sub-menu').show();
 			$(this).siblings().find('.sub-menu').hide()
 		});
 		$('#dowebok').fullpage({
@@ -263,21 +262,21 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 
-				emailCheck = $('#email').blur(function () {
-						var email = $('#email).val();
-							if (email == '') {
-								alert('请输入您的邮箱')
-								return
-							} else if (email != '') {
-								var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
-								isok = reg.test(email)
-								if (!isok) {
-									alert('邮箱格式不正确，请重新输入！')
-									return false
-								}
-							}
-							alert('ok 输入正确')
-						})("email")
+				// emailCheck = $('#email').blur(function () {
+				// 		var email = $('#email').val();
+				// 			if (email == '') {
+				// 				alert('请输入您的邮箱')
+				// 				return
+				// 			} else if (email != '') {
+				// 				var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
+				// 				isok = reg.test(email)
+				// 				if (!isok) {
+				// 					alert('邮箱格式不正确，请重新输入！')
+				// 					return false
+				// 				}
+				// 			}
+				// 			alert('ok 输入正确')
+				// 		})("email")
 
 
 
@@ -306,11 +305,25 @@
 							var s = myDate.getSeconds();
 							return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
 						}
+						$('#hide').value
+						
+					 var nickName = $("#advice").val()
+					 var nickName = $("#nickName").val()
+					 var nickName = $("#phoneNumber").val()
+					 var nickName = $("#email").val()
+					 var nickName = $("#qqNumber").val()
+					 var nickName = $("#wechat").val()
 
 
+					console.log(nickName)
 
 						console.log(requireData)
 						console.log(GetNowTime())
+
+
+
+
+
 						// passwd = $.md5(requireData + Date());
 						/*  $.ajax({
 								//几个参数需要注意一下
