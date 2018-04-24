@@ -55,22 +55,22 @@ body {
     background-image: url("../images/bj/feedback.png")
 }
 
-/*
+
 .conpanybj {
     opacity: 1;
-    background-image: url(http://47.98.164.44:9999/bg/ball.png)
+    background-image: url("../images/bj/ball.png")
 }
 
 .warebj {
     opacity: 1;
-    background-image: url(../images/coffeetree.png)
+    background-image: url('../images/coffeetree.png')
 }
 
 .prodbj {
     opacity: 1;
-    background-image: url("http://47.98.164.44:9999/prod_introduce/machine/cafemaker-full.jpg")
+    background-image: url("../images/common/cafemaker-full.jpg")
 }
- */
+ 
 
 .container {
     width: 100%;

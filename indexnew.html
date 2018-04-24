@@ -262,29 +262,8 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 
-		// emailCheck = $('#email').blur(function () {
-		// 		var email = $('#email').val();
-		// 			if (email == '') {
-		// 				alert('请输入您的邮箱')
-		// 				return
-		// 			} else if (email != '') {
-		// 				var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
-		// 				isok = reg.test(email)
-		// 				if (!isok) {
-		// 					alert('邮箱格式不正确，请重新输入！')
-		// 					return false
-		// 				}
-		// 			}
-		// 			alert('ok 输入正确')
-		// 		})("email")
-
-
-
 		// 表單提交
 		$("#feedbackBtn").click(function () {
-			
-
-
 			
 			function p(s) {
 				return s < 10 ? '0' + s : s;
@@ -310,21 +289,12 @@
 
 			// ceshi 
 			let newData = $('#feedbackForm').serialize();
-			console.log(newData);
+			
 
-
-
-
-
-
-
-
-
-
-			// passwd = $.md5(requireData + Date());
+			
 			$.ajax({
 				
-				type: "POST", //方法类型
+				type: "POST",
 				url: "http://47.98.164.44:8081/feedback/addFeedback",
 				data: newData,
 				success: function (result) {
@@ -333,14 +303,11 @@
 						window.location.href = "./site/submit_success/submitSucseccfully.html";
 					};
 				},
-				// error: function () {
-				// 	alert("异常！");
-				// }
+			
+
 			});
 
-
-			/*  */
-
+	
 
 
 
