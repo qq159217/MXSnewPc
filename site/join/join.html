@@ -1,73 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh" html lang="zh-CN" xml:lang="zh-CN">
-
+<html lang="zh-CN" html="" xml:lang="zh-CN">
 
 <head>
-    <meta charset=UTF-8 "UTF-8">
+    <meta charset="UTF-8" "utf-8"="" />
     <title>杭州米修斯科技有限公司--加盟合作</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=1.0"
     />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" type="text/css" href="../../css/index-new.min.css" />
-    <link rel="stylesheet" href="../../css/common.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=1024" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/index-new.min.css" />
     <link rel="stylesheet" href="../../css/join.css" />
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
-
-
-
-    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
-    <script type="text/javascript" src="http://validform.rjboy.cn/wp-content/themes/validform/js/jquery-1.6.2.min.js"></script>
-    <script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
-    <script src="../../js/tools.js"></script>
-
 </head>
 
 <body>
     <!-- 顶部导航栏 -->
-    <!-- 顶部导航栏 -->
-    <div class="topNav  topNav-fixed">
+    <div class="topNav">
         <div class="container">
             <div class="mxs_container">
                 <div class="menu" id="menu">
                     <div class="fl">
-                        <img src="http://47.98.164.44:9999/bg/logo.png" class="logo fl" />
+                        <img src="../../images/common/logo.png" class="logo fl" />
                         <p class="fr">MEASURES</p>
                     </div>
                     <nav class="fr">
                         <ul>
                             <li class="item">
-                                <a href="./indexnew.html">首页</a>
+                                <a href="./index.html">首页</a>
                             </li>
                             <li class="item">
-                                <a href="#">公司简介
-                                    <ul class="sub-menu">
-                                        <li class="">
-                                            <a href="./site/compony/story.htm">公司故事</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="./site/compony/team.html">团队介绍</a>
-                                        </li>
-                                    </ul>
-                                </a>
+                                <a href="#">公司简介</a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="./site/compony/story.htm">公司故事</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./site/compony/team.html">团队介绍</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="item">
-                                <a href="#">产品介绍
-                                    <ul class="sub-menu">
-                                        <li class="">
-                                            <a href="./site/product/machine.html">机器介绍</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="./site/product/technology.html">技术介绍</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="./site/product/coffee.html">咖啡家族</a>
-                                        </li>
-                                    </ul>
-                                </a>
+                                <a href="#">产品介绍</a>
+                                <ul class="sub-menu">
+                                    <li class="">
+                                        <a href="./site/product/machine.html">机器介绍</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./site/product/technology.html">技术介绍</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="./site/product/coffee.html">咖啡家族</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="item">
-                                <a href="./site/join/join.htm">加盟合作</a>
+                                <a href="./site/union/union.html">加盟合作</a>
                             </li>
                             <li class="item">
                                 <a href="#">反馈</a>
@@ -81,37 +69,76 @@
             </div>
         </div>
     </div>
-
-
-    <div class="full">
-
-        <div class="join mxs_container">
-
-            <h2>
-                加盟合作 </h2>
-
-            <form action="" method="post">
-
-                <input class="mg_bottom" type="text" placeholder="您的姓名*" name="nickName">
-                <br>
-                <input type="text" class="mg_bottom" placeholder="您的手机号码*" name="                 phoneNumber">
-                <br>
-                <input type="email" class="mg_bottom" placeholder="您的邮箱*" name="email">
-                <br>
-                <textarea class="fr" name="advice" id="" cols="30" name="advice" rows="10" placeholder="留言(选填)"></textarea>
-                <button type="submit" class="submit" id="feedbacksubmit">提交</button>
+    <div class="full ">
+        <div class="join mxs_container joinbj">
+            <h2> 加盟合作 </h2>
+            <form id="joinForm" method="post">
+                <input class="mg_bottom" type="text" placeholder="您的姓名*" name="nickName" />
+                <br />
+                <input type="text" class="mg_bottom" placeholder="您的手机号码*" name="
+                 phoneNumber" />
+                <br />
+                <input type="email" class="mg_bottom" placeholder="您的邮箱*" name="email" />
+                <br />
+                <textarea class="fr" name="advice" id="" cols="30" rows="10" placeholder="留言(选填)"></textarea>
+                <input type="text" id="hide" name="token" />
+                <button type="submit" class="submitJoin">提交</button>
             </form>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('nav>ul .item').mouseenter(function () {
+                $(this).find('.sub-menu').show();
+                $(this).siblings().find('.sub-menu').hide()
+            });
+
+            function p(s) {
+                return s < 10 ? '0' + s : s;
+            }
+
+            function GetNowTime() {
+                var myDate = new Date();
+                //获取当前年
+                var year = myDate.getFullYear();
+                //获取当前月
+                var month = myDate.getMonth() + 1;
+                //获取当前日
+                var date = myDate.getDate();
+                var h = myDate.getHours(); //获取当前小时数(0-23)
+                var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+                var s = myDate.getSeconds();
+                return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
+            }
+
+            let requireData = $.md5("mixiusi" + GetNowTime());
+
+            $("#hide").attr("value", requireData);
+
+            // ceshi 
+            let newData = $('#joinForm').serialize();
+            $("#submitJoin").click(function () {
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "http://47.98.164.44:8081/joinUs/addJoiner",
+                    data: newData,
+                    success: function (result) {
+                        console.log(result);
+                        if (result.resultCode == 0000) {
+                            window.location.href =
+                                "./site/submit_success/submitSucseccfully.html";
+                        };
+                    },
+
+
+
+                });
+            })
+
+        });
+    </script>
 </body>
 
 </html>
-
-<script>
-   $(document).ready(function () {
-       $("#feedbacksubmit").click(function() {
-         window.location = "../submit_success/submitSucseccfully.html";
-         console.log("哈哈");
-       })
-   })
-</script>

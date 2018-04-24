@@ -7,10 +7,10 @@
     box-sizing: border-box;
 }
 
-.joinbj {
+/* .joinbj {
     opacity: 1;
-    background-image: url(http://47.98.164.44:9999/bg/join.png)
-}
+    background-image: url(http://47.98.164.44/bg/join.png)
+} */
 
 .join h2 {
     color: #666;
@@ -57,13 +57,13 @@ textarea {
     left: 590px;
 }
 
-.submit {
-    width: 235px;
-    height: 62px;
-    /*margin-bottom: 0;*/
-    position: absolute;
-    bottom: -290px;
-    left: 365px;
+.submitJoin {
+    color: #6a7373;
+    width: 110px;
+    height: 38px;
+    border-radius: 5px;
     background-color: #32ffff;
-    border-radius: 8px;
+    position: absolute;
+    left: 430px;
+    top: 300px;
 }

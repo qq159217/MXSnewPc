@@ -76,7 +76,7 @@ h2 {
     background-color: #069CCF;
 }
 
-.hide {
-   
-    visibility: hidden
+#hide {
+    visibility:hidden
+
 }
