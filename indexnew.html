@@ -16,6 +16,8 @@
 	<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.5&key=78fb78e9faaf9537ce8df294c1d506d0"></script>
 	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+	<script src="./js/tools.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 </head>
 
 <body>
@@ -61,7 +63,7 @@
 								</a>
 							</li>
 							<li class="item">
-								<a href="./site/join/join.htm">加盟合作</a>
+								<a href="./site/join/join.html">加盟合作</a>
 							</li>
 							<li class="item">
 								<a href="#">反馈</a>
@@ -183,7 +185,8 @@
 						<div class="text">
 							<p>客服热线:000-100-900</p>
 							<p>加盟热线:000-100-900
-								<p/> </div>
+							</p>>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -196,24 +199,25 @@
 						<h2>
 							反馈
 						</h2>
-						<form class="" method="post">
+						<form class="" id="feedbackForm" method="post">
 							<div class="fl">
 								<textarea class="" name="advice" id="" cols="30" name="advice" rows="10" placeholder="请在此留下您的宝贵意见"></textarea>
 							</div>
 							<div class="ipt fl">
 								<input type="text" placeholder="您的姓名*" name="nickName">
 								<br>
-								<input type="text" placeholder="您的手机号码*" name="phoneNumber"  required>
+								<input type="text" placeholder="您的手机号码*" name="phoneNumber" required>
 								<br>
-								<input type="email" placeholder="您的邮箱*" name="email"  required>
+								<input type="email" placeholder="您的邮箱*" name="email" required>
 								<br>
-								<input type="email" placeholder="您的qq" name="qqNumber">
+								<input type="email" id="email" placeholder="您的qq" name="qqNumber">
 								<br>
 								<input type="email" placeholder="您的微信" name="weChat">
 								<div>
 									<p class="message">工作人员将尽快与您取得联系( 三个工作日内)</p>
 								</div>
-								<button type="submit" class="submit">提交</button>
+								<button type="submit" id="feedbackBtn" class="submit">提交</button>
+								<input type="text" name="token" id="hide" value="">
 							</div>
 						</form>
 					</div>
@@ -257,6 +261,86 @@
 	});
 </script>
 <script type="text/javascript">
+	$(document).ready(function () {
+
+				emailCheck = $('#email').blur(function () {
+						var email = $('#email).val();
+							if (email == '') {
+								alert('请输入您的邮箱')
+								return
+							} else if (email != '') {
+								var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
+								isok = reg.test(email)
+								if (!isok) {
+									alert('邮箱格式不正确，请重新输入！')
+									return false
+								}
+							}
+							alert('ok 输入正确')
+						})("email")
+
+
+
+					// 表單提交
+					$("#feedbackBtn").click(function () {
+						let requireData = "mixiusi" + $('#feedbackForm').serialize() + GetNowTime();
+
+
+
+
+						// 時間格式化
+						function p(s) {
+							return s < 10 ? '0' + s : s;
+						}
+
+						function GetNowTime() {
+							var myDate = new Date();
+							//获取当前年
+							var year = myDate.getFullYear();
+							//获取当前月
+							var month = myDate.getMonth() + 1;
+							//获取当前日
+							var date = myDate.getDate();
+							var h = myDate.getHours(); //获取当前小时数(0-23)
+							var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+							var s = myDate.getSeconds();
+							return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
+						}
+
+
+
+						console.log(requireData)
+						console.log(GetNowTime())
+						// passwd = $.md5(requireData + Date());
+						/*  $.ajax({
+								//几个参数需要注意一下
+								type: "POST",//方法类型
+								dataType: "json",//预期服务器返回的数据类型
+								url: "http://47.98.164.44:8081/feedback/addFeedback",
+								data: $('#feedbackForm').serialize(),
+								success: function (result) {
+									console.log(result);//打印服务端返回的数据(调试用)
+									if (result.resultCode == 200) {
+										alert("SUCCESS");
+									}
+									;
+								},
+								error: function () {
+									alert("异常！");
+								}
+							});  */
+
+
+						/*  */
+
+
+
+
+
+					});
+				});
+</script>
+<script>
 	var map = new AMap.Map("container", {
 		resizeEnable: true,
 		center: [120.095442, 30.310185], //地图中心点

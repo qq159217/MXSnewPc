@@ -10,13 +10,14 @@ body {
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
     -webkit-transition: all .5s ease;
-    font-family: 'PingFangSC-Thin';
+    font-family: 'microsoft Yahei';
+    font-size: 14px;
     overflow: hidden;
 }
 
 @font-face {
     font-family: 'PingFangSC-Thin';
-    src: url('../fonts/PingFang Light.ttf'), url('../fonts/PingFang Bold.ttf'), url('../fonts/PingFang 简细.ttf');
+    src: url('../fonts/PingFang Light.ttf');
 }
 
 * {
@@ -375,8 +376,8 @@ ul {
 
 .section-04 .content .join {
     /* border: #86FFFF solid 3px; */
-    text-align: left;
-    margin-left: 33.45em;
+    /* text-align: left; */
+    /* margin-left: 33.45em; */
     margin-bottom: 100px;
 }
 
@@ -393,7 +394,7 @@ ul {
     background-color: #FF09FF;
     display: block;
     text-align: center;
-    /* margin-left: 535px; */
+    margin-left: 42%;
     border-radius: 10px;
     padding-top: 10px;
     margin-top: 8px;
@@ -421,9 +422,9 @@ ul {
 }
 
 .join_text .text p {
-    height: 20px;
+    /* height: 20px; */
     font-size: 20px;
-    width: 220px;
+    width: 238px;
     color: #4E91BF;
 }
 
@@ -471,6 +472,9 @@ ul {
     opacity: 1;
 }
 
+.feedback  #hide {
+    opacity: 1;
+}
 .ipt .message {
     margin-top: 40px;
     font-size: 12px;
@@ -484,8 +488,8 @@ ul {
     border-radius: 5px;
     background-color: #32FFFF;
     position: absolute;
-    left: 65rem;
-    top: 33rem;
+    left: 1005px;
+    top: 374px;
 }
 
 .feedback textarea {

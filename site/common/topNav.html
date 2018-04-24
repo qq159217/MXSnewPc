@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+    <link rel="stylesheet" href="../../css/index-new.min.css" />
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
+
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <title>杭州米修斯科技有限公司</title>
+</head>
+
+<body>
+    <div class="topNav  topNav-fixed">
+        <div class="container">
+            <div class="mxs_container">
+                <div class="menu" id="menu">
+                    <div class="fl">
+                        <img src="http://47.98.164.44:9999/bg/logo.png" class="logo fl" />
+                        <p class="fr">MEASURES</p>
+                    </div>
+                    <nav class="fr">
+                        <ul>
+                            <li class="item">
+                                <a href="./indexnew.html">首页</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">公司简介
+                                    <ul class="sub-menu">
+                                        <li class="">
+                                            <a href="./site/compony/story.htm">公司故事</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="./site/compony/team.html">团队介绍</a>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">产品介绍
+                                    <ul class="sub-menu">
+                                        <li class="">
+                                            <a href="./site/product/machine.html">机器介绍</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="./site/product/technology.html">技术介绍</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="./site/product/coffee.html">咖啡家族</a>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="./site/join/join.htm">加盟合作</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">反馈</a>
+                            </li>
+                            <li class="item">
+                                <a href="#">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('nav>ul .item').mouseenter(function () {
+            $(this).find('.sub-menu').slideDown(200).show();
+          
+        });
+        $('nav>ul .item').mouseleave(function () {
+
+            $(this).siblings().find('.sub-menu').hide()
+        });
+  
+
+
+    /**
+    * hoverIntent r5 // 2007.03.27 // jQuery 1.1.2+
+    * <http://cherne.net/brian/resources/jquery.hoverIntent.html>
+    * 
+    * @param  f  onMouseOver function || An object with configuration options
+    * @param  g  onMouseOut function  || Nothing (use configuration options object)
+    * @author    Brian Cherne <brian@cherne.net>
+    */
+
+
+    $(function() {  
+        // 菜单绑定事件  
+        initMenuListener();  
+        // 下拉菜单绑定事件  
+        initSubMenuHover();  
+        // 下拉菜单颜色改变  
+        initSubMenuLiHover();  
+    });  
+  
+/** 
+ * 头部菜单绑定滑过事件 
+ */  
+function initMenuListener() {  
+  
+    $(“.menuli”).hover(function() {  
+        var hideDivId = $(this).attr(“id”) + “_div”;  
+        // 得到菜单的位置  
+        var left = $(this).offset().left;  
+        var top = $(this).offset().top;  
+        var height = $(this).outerHeight();//outerHeight是获取高度，包括内边距，height是也是获取高度，不过只包括文本高度  
+  
+        $(“#” + hideDivId).show();  
+        $(“#” + hideDivId).css(“left”, left);  
+        $(“#” + hideDivId).css(“top”, top + height);  
+  
+    }, function() {  
+        // 将原来的菜单隐藏  
+        $(“.display”).hide();  
+    });  
+}  
+/** 
+ * 下拉菜单绑定事件 
+ */  
+function initSubMenuHover() {  
+    $(“.display”).hover(function() {  
+        $(this).show();  
+    }, function() {  
+        $(this).hide();  
+    });  
+}  
+/** 
+ *  下拉菜单改变颜色 
+ */  
+function initSubMenuLiHover() {  
+    $(“.redli”).hover(function() {  
+        $(this).addClass(“redcolor”);  
+    }, function() {  
+        $(this).removeClass(“redcolor”);  
+    });  
+}  
+      
+
+
+
+
+
+
+
+  });
+</script>

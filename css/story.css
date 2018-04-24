@@ -18,8 +18,8 @@
 .bot {
     position: relative;
     top: 10px;
-    left: 144px;
-   
+    left: 111px;
+    background-color: #FCBD10;
 }
 
 .story .fr {
@@ -30,10 +30,12 @@
     margin-left: 31px;
     position: absolute;
     left: 401px;
-  
 }
 
 .story .fr img {
     width: 459px;
     height: 447px;
+}
+.title {
+    margin-top: 10px;
 }
