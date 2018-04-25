@@ -13,63 +13,12 @@
     <link rel="stylesheet" href="../../css/join.css" />
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
     <script src="../../js/md5.js"></script>
+    <script src="../../js/siteCommon.js"></script>
+    
 </head>
 
 <body>
-    <!-- 顶部导航栏 -->
-    <div class="topNav">
-        <div class="container">
-            <div class="mxs_container">
-                <div class="menu" id="menu">
-                    <div class="fl">
-                        <img src="../../images/common/logo.png" class="logo fl" />
-                        <p class="fr">MEASURES</p>
-                    </div>
-                    <nav class="fr">
-                        <ul>
-                            <li class="item">
-                                <a href="./index.html">首页</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">公司简介</a>
-                                <ul class="sub-menu">
-                                    <li class="">
-                                        <a href="./site/compony/story.htm">公司故事</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="./site/compony/team.html">团队介绍</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item">
-                                <a href="#">产品介绍</a>
-                                <ul class="sub-menu">
-                                    <li class="">
-                                        <a href="./site/product/machine.html">机器介绍</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="./site/product/technology.html">技术介绍</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="./site/product/coffee.html">咖啡家族</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="item">
-                                <a href="./site/union/union.html">加盟合作</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">反馈</a>
-                            </li>
-                            <li class="item">
-                                <a href="#">联系我们</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div id="top"></div>
     <div class="full ">
         <div class="join mxs_container joinbj">
             <h2> 加盟合作 </h2>
@@ -87,59 +36,7 @@
             </form>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('nav>ul .item').mouseenter(function () {
-                $(this).find('.sub-menu').show();
-                $(this).siblings().find('.sub-menu').hide()
-            });
-
-            function p(s) {
-                return s < 10 ? '0' + s : s;
-            }
-
-            function GetNowTime() {
-                var myDate = new Date();
-                //获取当前年
-                var year = myDate.getFullYear();
-                //获取当前月
-                var month = myDate.getMonth() + 1;
-                //获取当前日
-                var date = myDate.getDate();
-                var h = myDate.getHours(); //获取当前小时数(0-23)
-                var m = myDate.getMinutes(); //获取当前分钟数(0-59)
-                var s = myDate.getSeconds();
-                return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
-            }
-
-            let requireData = $.md5("mixiusi" + GetNowTime());
-
-            $("#hide").attr("value", requireData);
-
-            // ceshi 
-            let newData = $('#joinForm').serialize();
-            $("#submitJoin").click(function () {
-
-                $.ajax({
-
-                    type: "POST",
-                    url: "http:// mixiusi.com.cn:8081/joinUs/addJoiner",
-                    data: newData,
-                    success: function (result) {
-                        console.log(result);
-                        if (result.resultCode == 0000) {
-                            window.location.href =
-                                "./site/submit_success/submitSucseccfully.html";
-                        };
-                    },
-
-
-
-                });
-            })
-
-        });
-    </script>
+    
 </body>
 
 </html>

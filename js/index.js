@@ -7,6 +7,9 @@ $(function () {
 		$(this).siblings().find('.sub-menu').hide()
 	})
 })
+
+
+$("#top_homepage").load("../site/common/common.html")
 // feedback 表單提交
 $("#feedbackBtn").click(function () {
 
