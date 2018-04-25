@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=1024" />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/index-new.min.css" />
+   
     <link rel="stylesheet" href="../../css/join.css" />
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
     <script src="../../js/md5.js"></script>
@@ -19,8 +19,9 @@
 
 <body>
    <div id="top"></div>
-    <div class="full ">
-        <div class="join mxs_container joinbj">
+   <div class="box_shadow">
+       <div class="joinbj ">
+        <div class="join mxs_container ">
             <h2> 加盟合作 </h2>
             <form id="joinForm" method="post">
                 <input class="mg_bottom" type="text" placeholder="您的姓名*" name="nickName" />
@@ -32,10 +33,15 @@
                 <br />
                 <textarea class="fr" name="advice" id="" cols="30" rows="10" placeholder="留言(选填)"></textarea>
                 <input type="text" id="hide" name="token" />
-                <button type="submit" class="submitJoin">提交</button>
+                <p>工作人员将尽快与您取得联系(三个工作日之内)</p>
+                <button type="submit" id="joinSubmit" class="submitJoin">提交</button>
             </form>
+            <!-- <div class="message fl">客服热线:000-100-9000</div>
+            <div class="message fr">客服热线:000-000-9000</div> -->
         </div>
     </div>
+   </div>
+    
     
 </body>
 
