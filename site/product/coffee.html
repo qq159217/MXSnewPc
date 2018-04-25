@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="../../css/coffee.css" />
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
     <script src="../../js/jquery.slide.min.js"></script>
-    <script src="../../js/tools.js"></script>
+
     <script src="../../js/siteCommon.js"></script>
-    
+
 </head>
 
 <body>
     <!-- 顶部导航栏 -->
-   <div id="top"></div>
+    <div id="top"></div>
 
-    <div class="coffee mxs_container ">
+    <div class="coffee mxs_container">
         <div class="top ">
             <h2>好享家族</h2>
             <div class="line "></div>
@@ -85,8 +85,12 @@
                     </ul>
                 </div>
                 <div class="btn">
-                    <a href="javascript:void(0);" target="_self" class="btnPrev j_slidePrev"></a>
-                    <a href="javascript:void(0);" target="_self" class="btnNext j_slideNext"></a>
+                    <a href="javascript:void(0);" target="_self" class="btnPrev j_slidePrev">
+                        <img src="../../images/arraw/arr_l.png" alt="">
+                    </a>
+                    <a href="javascript:void(0);" target="_self" class="btnNext j_slideNext">
+                        <img src="../../images/arraw/arr_r.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
@@ -94,6 +98,9 @@
 
 
     </div>
+    <div class=" coffeebj"> </div>
+        
+
 
 
 
@@ -126,26 +133,6 @@
 
 
 
-<script type="text/javascript ">
-    $(document).onmouseend(function () {
-        $('nav li').hover(function () {
-            $(this).find('.sub-menu').show();
-        }, function () {
-            $(this).find('.sub-menu').hide();
-        });
-    });
-</script>
-<script>
-    $("#marquee2").slide({
-        scrollLen: 1,
-        effect: "scrollx",
-        auto: true,
-        seamless: true,
-        interval: 1000,
-        lazyload: true,
-
-    });
-</script>
 
 
 
