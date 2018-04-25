@@ -33,17 +33,17 @@
                     <nav class="fr">
                         <ul>
                             <li class="item">
-                                <a href="../../indexnew.html">首页</a>
+                                <a href="../../index.html">首页</a>
 
                             </li>
                             <li class="item">
                                 <a href="#">公司简介
                                     <ul class="sub-menu">
                                         <li class="">
-                                            <a href="../../site/compony/story.htm">公司故事</a>
+                                            <a href="../compony/story.html">公司故事</a>
                                         </li>
                                         <li class="">
-                                            <a href="../../site/compony/team.html">团队介绍</a>
+                                            <a href="../compony/team.html">团队介绍</a>
                                         </li>
 
                                     </ul>
@@ -52,18 +52,18 @@
                                 <a href="#">产品介绍
                                     <ul class="sub-menu">
                                         <li class="">
-                                            <a href="./site/product/machine.html">机器介绍</a>
+                                            <a href="../product/machine.html">机器介绍</a>
                                         </li>
                                         <li class="">
-                                            <a href="./site/product/technology.html">技术介绍</a>
+                                            <a href="../product/technology.html">技术介绍</a>
                                         </li>
                                         <li class="">
-                                            <a href="./site/product/coffee.html">咖啡家族</a>
+                                            <a href="../product/coffee.html">咖啡家族</a>
                                         </li>
                                     </ul>
                             </li>
                             <li class="item">
-                                <a href="./site/union/union.html">加盟合作</a>
+                                <a href="../join/join.html">加盟合作</a>
 
                             </li>
                             <li class="item">
@@ -85,24 +85,23 @@
         </div>
     </div>
 
-<div class="mxs_container"> 
-    <h1> 404 NOT FOUND !</h1>
-</div>
+    <div class="mxs_container">
+    </div>
 
 
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('nav>ul .item').mouseenter(function () {
-            $(this).find('.sub-menu').show();
-            // $(this).siblings().find('.sub-menu').hide()
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('nav>ul .item').mouseenter(function () {
+                $(this).find('.sub-menu').show();
+                // $(this).siblings().find('.sub-menu').hide()
+            });
+            $('nav>ul .item').mouseleave(function () {
+                // $(this).find('.sub-menu').show();
+                $(this).siblings().find('.sub-menu').hide()
+            });
+            $('#dowebok').fullpage({
+                // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+            });
         });
-        $('nav>ul .item').mouseleave(function () {
-            // $(this).find('.sub-menu').show();
-            $(this).siblings().find('.sub-menu').hide()
-        });
-        $('#dowebok').fullpage({
-            // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
-        });
-    });
-</script>
+    </script>

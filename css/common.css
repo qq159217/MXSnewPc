@@ -11,11 +11,19 @@ h2,
 p,
 input,
 textarea,
-button {
+button,
+input,
+h3
+,h4
+,h5
+a
+,
+span
+ {
     margin: 0;
     padding: 0;
     font-weight: 100;
-    font-family: PingFangSC-Thin;
+    font-family: "PingFangSC-Thin";
 }
 
 ul {
@@ -77,6 +85,7 @@ h2 {
 }
 
 #hide {
-    visibility:hidden
-
+    visibility: hidden
 }
+
+* {}

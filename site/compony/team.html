@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../css/team.css" />
 
     <link rel="stylesheet" type="text/css" href="../../css/index-new.css" />
-    
+
 
 
     <link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet">
@@ -29,24 +29,24 @@
             <div class="mxs_container">
                 <div class="menu" id="menu">
                     <div class="fl">
-                        <img src="http://47.98.164.44:9999/bg/logo.png" alt="logo" class="logo fl" class="logo fl" />
+                        <img src="../../images/common/logo.png" alt="logo" class="logo fl" class="logo fl" />
                         <p class="fr">MEASURES</p>
                     </div>
 
                     <nav class="fr">
                         <ul>
                             <li class="item">
-                                <a href="./index.html">首页</a>
+                                <a href="../../index.html">首页</a>
 
                             </li>
                             <li class="item">
                                 <a href="#">公司简介
                                     <ul class="sub-menu">
                                         <li class="">
-                                            <a href="./site/compony/story.htm">公司故事</a>
+                                            <a href="../compony/story.html">公司故事</a>
                                         </li>
                                         <li class="">
-                                            <a href="./site/compony/team.html">团队介绍</a>
+                                            <a href="../compony/team.html">团队介绍</a>
                                         </li>
 
                                     </ul>
@@ -56,19 +56,19 @@
                                 <a href="#">产品介绍
                                     <ul class="sub-menu">
                                         <li class="">
-                                            <a href="./site/product/machine.html">机器介绍</a>
+                                            <a href="../product/machine.html">机器介绍</a>
                                         </li>
                                         <li class="">
-                                            <a href="./site/product/technology.html">技术介绍</a>
+                                            <a href="../product/technology.html">技术介绍</a>
                                         </li>
                                         <li class="">
-                                            <a href="./site/product/coffee.html">咖啡家族</a>
+                                            <a href="../product/coffee.html">咖啡家族</a>
                                         </li>
                                     </ul>
                                 </a>
                             </li>
                             <li class="item">
-                                <a href="./site/union/union.html">加盟合作</a>
+                                <a href="../join/join.html">加盟合作</a>
 
                             </li>
                             <li class="item">
@@ -92,7 +92,7 @@
     <div class="team mxs_container">
         <div class="top">
             <div class="fl">
-                <img src="http://47.98.164.44:9999/bg/ball.png" alt="ball">
+                <img src="../../images/bj/ball.png" alt="ball">
                 <div class="line first"></div>
                 <h2>团队简介</h2>
                 <div class="line last"></div>
@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="bot">
-            <img src="http://47.98.164.44:9999/company_desc/team.jpg" alt="公司照片">
+            <img src="../../images/team/team.jpg" alt="公司照片">
         </div>
 
     </div>
@@ -145,11 +145,10 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('nav li').hover(function () {
+        $('nav>ul .item').mouseenter(function () {
             $(this).find('.sub-menu').show();
-        }, function () {
-            $(this).find('.sub-menu').hide();
-        });
+            $(this).siblings().find('.sub-menu').hide()
+        })
     });
 </script>
 

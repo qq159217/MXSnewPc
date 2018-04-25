@@ -22,7 +22,7 @@ h4 {
 
 .conpanybj {
     opacity: 1;
-    background-image: url('http://47.98.164.44/bg/coffee_pro.jpg')
+    background-image: url('http://mixiusi.com.cn:8081/bg/coffee_pro.jpg')
 }
 
 /* /轮播图样式 */
@@ -99,7 +99,6 @@ hr {
     background: url(images/slide_arrow3_prev.png) no-repeat 0 0;
     cursor: pointer;
     outline: none;
-
 }
 
 #marquee2 .btn .btnPrev {

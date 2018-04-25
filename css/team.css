@@ -31,15 +31,15 @@
 }
 
 .team .first {
-    left: 214px;
-    top: 17px;
+    left: 219px;
+    top: 29px;
     position: absolute;
 }
 
 .team .last {
-  
-    left: 303px;
-    top: 77px;
+    background-color: #FCBB09;
+    left: 350px;
+    top: 87px;
     position: absolute;
 }
 
@@ -66,4 +66,3 @@
 . mxs_container {
     width: 85.38rem;
 }
-
