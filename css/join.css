@@ -33,11 +33,11 @@
     /* margin-top: 53px; */
 }
 
-.join form {
+.join #joinForm {
     position: relative;
 }
 
-.join form input {
+.join #joinForm input {
     width: 367px;
     height: 44px;
     background-color: #dedede;
@@ -47,15 +47,15 @@
     left: 0;
 }
 
-.join form input:nth-of-type(1) {
+.join #joinForm input:nth-of-type(1) {
     top: 0;
 }
 
-.join form input:nth-of-type(2) {
+.join #joinForm input:nth-of-type(2) {
     top: 79px;
 }
 
-.join form input:nth-of-type(3) {
+.join #joinForm input:nth-of-type(3) {
     top: 168px;
 }
 

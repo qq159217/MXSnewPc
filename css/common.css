@@ -69,7 +69,7 @@ h2 {
     line-height: 50px;
     color: #000101;
     font-size: 36px;
-    /* text-align: center; */
+    text-align: center;
     font-family: PingFangSC-Medium;
     font-weight: bold;
 }

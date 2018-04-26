@@ -19,10 +19,10 @@
 	<!-- <script src="./js/tools.js"></script> -->
 	<script src="./js/md5.js"></script>
 	<script type="text/javascript" src="/js/fullpage_mxs.min.js"></script>
-	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/index.min.js"></script>
 	<script type="text/javascript" src="/js/map.min.js"></script>
-	<script src="../../js/siteCommon.js"></script>
-	
+	<script src="../../js/siteCommon.min.js"></script>
+
 
 </head>
 
@@ -39,10 +39,10 @@
 					<nav class="fr">
 						<ul>
 							<li class="item">
-								<a href="./indexnew.html">首页</a>
+								<a href="./index.html">首页</a>
 							</li>
 							<li class="item">
-								<a href="#">公司简介
+								<a href="./index.html">公司简介
 									<ul class="sub-menu">
 										<li class="">
 											<a href="./site/compony/story.html">公司故事</a>
@@ -54,7 +54,7 @@
 								</a>
 							</li>
 							<li class="item">
-								<a href="#">产品介绍
+								<a href="./index.html">产品介绍
 									<ul class="sub-menu">
 										<li class="">
 											<a href="./site/product/machine.html">机器介绍</a>
@@ -72,10 +72,10 @@
 								<a href="./site/join/join.html">加盟合作</a>
 							</li>
 							<li class="item">
-								<a href="#">反馈</a>
+								<a href="./site/feedback/feedback.html">反馈</a>
 							</li>
 							<li class="item">
-								<a href="#">联系我们</a>
+								<a href="/index.html">联系我们</a>
 							</li>
 						</ul>
 					</nav>
@@ -254,3 +254,10 @@
 </body>
 
 </html>
+
+<script>
+	$('nav>ul .item').mouseenter(function () {
+		$(this).find('.sub-menu').show()
+		$(this).siblings().find('.sub-menu').hide()
+	})
+</script>

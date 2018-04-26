@@ -24,7 +24,7 @@
 
 <body>
     <!--nav -->
-  <div id="top"></div> 
+    <div id="top"></div>
 
 
 
@@ -38,7 +38,7 @@
                     <h2>
                         反馈
                     </h2>
-                    <form id="feedbackForm" method="post">
+                    <form id="feedbackForm">
                         <div class="fl">
                             <textarea class="" name="advice" id="advice" name="advice" placeholder="请在此留下您的宝贵意见"></textarea>
                         </div>
@@ -57,7 +57,7 @@
                             <div>
                                 <p class="message">工作人员将尽快与您取得联系( 三个工作日内)</p>
                             </div>
-                            <button type="submit" id="feedbackBtn" class="submit">提交</button>
+                            <button type="text" id="submitBtn" class="submit">提交</button>
                         </div>
                     </form>
                 </div>
@@ -67,21 +67,14 @@
 
 
 </html>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('nav>ul .item').mouseenter(function () {
-            $(this).find('.sub-menu').show();
-            $(this).siblings().find('.sub-menu').hide()
-        })
-    });
-</script>
+
 
 
 <script type="text/javascript">
     $(document).ready(function () {
 
         // 表單提交
-        $("#feedbackBtn").click(function () {
+        $("#submitBtn").click(function () {
 
             function p(s) {
                 return s < 10 ? '0' + s : s;
@@ -89,14 +82,11 @@
 
             function GetNowTime() {
                 var myDate = new Date();
-                //获取当前年
                 var year = myDate.getFullYear();
-                //获取当前月
                 var month = myDate.getMonth() + 1;
-                //获取当前日
                 var date = myDate.getDate();
-                var h = myDate.getHours(); //获取当前小时数(0-23)
-                var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+                var h = myDate.getHours();
+                var m = myDate.getMinutes();
                 var s = myDate.getSeconds();
                 return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
             }
@@ -104,23 +94,16 @@
             let requireData = $.md5("mixiusi" + GetNowTime());
 
             $("#hide").attr("value", requireData);
-
-            // ceshi 
             let newData = $('#feedbackForm').serialize();
-
-
-
             $.ajax({
-
                 type: "POST",
                 url: 'http://mixiusi.com.cn:8081/feedback/addFeedback',
                 data: newData,
                 success: function (result) {
-                    // console.log(result); 
-                    if (result.resultCode == 0000) {
-                        window.location.href =
-                            "./site/submit_success/submitSucseccfully.html";
-                    };
+
+                    window.location.href =
+                        "./site/submit_success/submitSucseccfully.html";
+
                 },
 
 
