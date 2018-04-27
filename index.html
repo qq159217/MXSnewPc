@@ -256,8 +256,8 @@
 </html>
 
 <script>
-	$('nav>ul .item').mouseenter(function () {
-		$(this).find('.sub-menu').show()
-		$(this).siblings().find('.sub-menu').hide()
-	})
+		$(".section-06").find("#container").delay(50000).animate({
+					right: "0",
+					opacity: "0"
+				}, 3000, "easeOutExpo");
 </script>

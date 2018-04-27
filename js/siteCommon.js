@@ -1,10 +1,13 @@
 $(function () {
-/*   $('nav>ul .item').mouseenter(function () {
+
+
+  $('nav>ul .item').mouseenter(function () {
     $(this).find('.sub-menu').show()
     $(this).siblings().find('.sub-menu').hide()
-  }) */
+  })
+
   // 公共頁面加載
-   $('#top').load('../common/common.jsp')
+   $('#top').load('../common/common.html')
 
 
 
@@ -21,7 +24,5 @@ $(function () {
   })
 
 
-  $('.messageR').click(function () {
-    console.log('test')
-  })
+
 })
