@@ -7,21 +7,21 @@ $(function () {
   })
 
   // 公共頁面加載
-   $('#top').load('../common/common.html')
+  //  $('#top').load('../common/common.html')
 
 
 
 
 
-  $('#marquee2').slide({
-    scrollLen: 1,
-    effect: 'scrollx',
-    auto: true,
-    seamless: true,
-    interval: 1000,
-    lazyload: true
+  // $('#marquee2').slide({
+  //   scrollLen: 1,
+  //   effect: 'scrollx',
+  //   auto: true,
+  //   seamless: true,
+  //   interval: 1000,
+  //   lazyload: true
 
-  })
+  // })
 
 
 
