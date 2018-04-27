@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="../../css/common.css" />
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
     <script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
-    <script src="./js/md5.js"></script>
     <script src="../../js/siteLoad.js"></script>
-   
+
+
     <style>
         .section {
             padding-top: 120px;
@@ -26,11 +26,6 @@
 <body>
     <!--nav -->
     <div id="top"></div>
-
-
-
-
-
     <!-- 反馈界面 -->
     <section class="section section-05  feedbackbj">
         <div class="mxs_container">
@@ -58,9 +53,10 @@
                             <div>
                                 <p class="message">工作人员将尽快与您取得联系( 三个工作日内)</p>
                             </div>
-                            <button type="text" id="submitBtn" class="submit">提交</button>
+                            <button type="button" id="feedbackBtn" class="submit">提交</button>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -70,9 +66,48 @@
 </html>
 
 
-
+<script src="./md5.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+        $("#feedbackBtn").click(function () {
 
+
+            function p(s) {
+                return s < 10 ? '0' + s : s;
+            }
+
+            var GetNowTime = function () {
+                var myDate = new Date();
+                var year = myDate.getFullYear();
+                var month = myDate.getMonth() + 1;
+                var date = myDate.getDate();
+                var h = myDate.getHours();
+                var m = myDate.getMinutes();
+                var s = myDate.getSeconds();
+                return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
+            }
+            // console.log("mixiusi" + GetNowTime());
+
+            let tokenValue = $.md5("mixiusi" + GetNowTime());
+            $("#hide").attr("value", tokenValue);
+            let newData = $('#feedbackForm').serialize();
+           
+         
+            $.ajax({
+                type: "POST",
+                url: 'http://mixiusi.com.cn:8081/feedback/addFeedback',
+                data: newData,
+                success: function (result) {
+                    alert("提交成功")
+
+                },
+            });
+ 
+
+
+
+
+
+        });
     });
 </script>

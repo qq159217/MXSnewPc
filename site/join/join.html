@@ -9,12 +9,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=1024" />
 	<link rel="stylesheet" href="../../css/common.css" />
-
 	<link rel="stylesheet" href="../../css/join.css" />
-	<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 	<script src="../../js/md5.js"></script>
-	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-	<script src="../../js/siteLoad.js"></script>
+	<!-- <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script> -->
+	<script src="./md5.js"></script>
 
 
 
@@ -29,16 +28,16 @@
 				<h2> 加盟合作 </h2>
 
 				<form id="joinForm">
-					<input type="text" placeholder="您的姓名*" name="nickName" />
-					<br />
-					<input type="text" placeholder="您的手机号码*" name="phoneNumber" />
-					<br />
-					<input type="email" placeholder="您的邮箱*" name="email" />
-					<br />
-					<textarea class="fr" name="advice" id="advice" placeholder="留言(选填)"></textarea>
+					<input type="text" placeholder="您的姓名*" name="userName" required />
+					<br/>
+					<input type="text" placeholder="您的手机号码*" value="18260621650" id="ph" name="phoneNumber"  required/>
+					<br/>
+					<input type="email" placeholder="您的邮箱*" name="email" required  />
+					<br/>
+					<textarea class="fr" name="message" id="advice" placeholder="留言(必填)"  required></textarea>
 					<input type="text" id="hide" name="token" />
 					<p>工作人员将尽快与您取得联系(三个工作日之内)</p>
-					<button type="button" id="submitBtn" class="submitJoin">提交</button>
+					<button type="button" id="btn">提交</button>
 				</form>
 
 
@@ -54,47 +53,62 @@
 </html>
 <script>
 	$(function () {
-		// $('#top').load('../common/common.html')
-		// 提交信息
-		$('#submitBtn').click(function () {
-			console.log("哈哈")
+
+
+
+
+
+		// 表單提交
+		$("#btn").click(function () {
+			
 			function p(s) {
-				return s < 10 ? '0' + s : s
+				return s < 10 ? '0' + s : s;
 			}
 
 			function GetNowTime() {
-				var myDate = new Date()
-
-				var year = myDate.getFullYear()
-				var month = myDate.getMonth() + 1
-				var date = myDate.getDate()
-				var h = myDate.getHours()
-				var m = myDate.getMinutes()
-				var s = myDate.getSeconds()
-				return year + '-' + p(month) + '-' + p(date) + ' ' + p(h) + ':' + p(m) + ':' + p(s)
+				var myDate = new Date();
+				var year = myDate.getFullYear();
+				var month = myDate.getMonth() + 1;
+				var date = myDate.getDate();
+				var h = myDate.getHours();
+				var m = myDate.getMinutes().toString().substring(0,2);
+				
+				
+				var s =0;
+				return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) ;
+				console.log(m)
 			}
+			// let requireData = $.md5("mixiusi" + GetNowTime());
 
-			let requireData = $.md5('mixiusi' + GetNowTime())
-			$('#hide').attr('value', requireData)
-			let newData = $("#joinForm").serialize();
-			consle.log(newData)
+			
+			var phoneNumber =$("#ph").attr("value");
+			var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
+			console.log(phoneNumber+"電話號碼");
+			console.log(GetNowTime()+"------銘文時間-----")
+			
+			console.log("mixiusi" + GetNowTime() + phoneNumber+"---銘文需要的數據-++++--")
 
-			  $.ajax({
-				type: 'post',
+			$("#hide").attr("value", requireData);
+			var newData = $('#joinForm').serialize();
+			// console.log(newData+"------")
+
+			$.ajax({
+				type: "POST",
 				url: 'http://47.98.164.44:8081/joinUs/addJoiner',
 				data: newData,
-				success: function (result) {
-					window.location.href = '../submit_success/submitSucseccfully.html'
+				success: function (response) {
+					console.log(newData)
+					console.log("加盟成功了哈! 等待客服聯繫.")
+					/* if (status = 200) {
+						window.location.href = '../submit_success/submitSucseccfully.html'
+					} */
 				},
-				error: function (error) {
-					conso.log("提交錯誤")
-					conso.log(newData)
-
+				error: function (request) {
+					console.log(newData)
+					console.log("加盟失敗")
 				}
-			})
-
-
-		})
+			});
+		});
 
 
 	})

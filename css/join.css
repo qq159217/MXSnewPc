@@ -71,7 +71,7 @@ textarea {
     left: 590px;
 }
 
-.submitJoin {
+#btn {
     color: #6a7373;
     width: 235px;
     height: 62px;
