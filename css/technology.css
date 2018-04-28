@@ -1,7 +1,7 @@
 .technology {
     position: relative;
     top: 111px;
-    left: 95px;
+    left: 45px;
 }
 
 .mxs_container {
@@ -77,9 +77,11 @@
 }
 
 .r .line {
-    margin-left: 210px;
+    margin-left: 120px;
 }
-
+.r h2 {
+    margin-left: -195px;
+}
 .treebj {
     opacity: 0.68;
     position: absolute;

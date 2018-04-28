@@ -150,7 +150,7 @@ ul {
 }
 
 .menu :last-child {
-    margin-right: auto
+    /* margin-right: 26px; */
 }
 
 .topNav .menu .item a {
@@ -372,7 +372,7 @@ ul {
     left: 160px;
     top: 273px;
     line-height: 22px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .section-03 .line_4 {

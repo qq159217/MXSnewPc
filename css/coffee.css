@@ -108,7 +108,7 @@ hr {
 }
 
 #marquee2 .btn .btnPrev {
-    left: 0;
+    left: 80px;
 }
 
 #marquee2 .btn .btnPrev img,
@@ -120,7 +120,7 @@ hr {
 }
 
 #marquee2 .btn .btnNext img {
-    left: 10px;
+    left: -110px;
 }
 
 #marquee2 .btn .btnNext {
