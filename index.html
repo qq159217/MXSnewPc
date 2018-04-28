@@ -11,24 +11,20 @@
 	<link rel="stylesheet" type="text/css" href="./css/index-new.css" />
 	<link rel="stylesheet" href="./css/common.css" />
 	<link href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.css" rel="stylesheet">
-	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/117427/47086/5ae2e264f629dd0700cec2f1.css' rel='stylesheet' type='text/css' />
-	
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/117427/47086/5ae2e264f629dd0700cec2f1.css' rel='stylesheet' type='text/css'
+	/>
+
 	<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+	<script src="./js/md5.js"></script>
 	<script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
 	<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.5&key=78fb78e9faaf9537ce8df294c1d506d0"></script>
 	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 	<!-- <script src="./js/tools.js"></script> -->
-	<script src="./js/md5.js"></script>
 	<script type="text/javascript" src="/js/fullpage_mxs.min.js"></script>
-	<script type="text/javascript" src="/js/index.min.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript" src="/js/map.min.js"></script>
-	<script>
-		$(function () {
 
-			$("#top").load("./site/common/common.html")
-		})
-	</script>
 
 
 </head>
@@ -161,7 +157,7 @@
 						<h2>
 							反馈
 						</h2>
-						<form id="feedbackForm" method="post">
+						<form id="feedbackForm">
 							<div class="fl">
 								<textarea class="" name="advice" id="advice" name="advice" required placeholder="请在此留下您的宝贵意见"></textarea>
 							</div>
@@ -180,7 +176,7 @@
 								<div>
 									<p class="message">工作人员将尽快与您取得联系( 三个工作日内)</p>
 								</div>
-								<button type="submit" id="feedbackBtn" class="submit">提交</button>
+								<button type="button" id="feedbackBtn" class="submit">提交</button>
 							</div>
 						</form>
 					</div>
@@ -209,9 +205,3 @@
 
 </html>
 
-<script>
-	$(".section-06").find("#container").delay(50000).animate({
-		right: "0",
-		opacity: "0"
-	}, 3000, "easeOutExpo");
-</script>

@@ -12,7 +12,7 @@
 
 .top .fl {
     height: 192px;
-    margin-left: 2.56rem;
+    margin-left: 41px;
 }
 
 .top .fl h2 {
@@ -49,16 +49,20 @@
     float: left;
 }
 
-.top .fr {
-    /* height: 192px; */
-    font-size: 12px;
-    text-align: left;
-    line-height: 35px;
-    font-family: PingFangSC-Light;
-    color: #000000;
+.top .r {
+   
+       font-size: 14px;
+       text-align: left;
+       font-weight: normal;
+       line-height: 35px;
+       color: #000000;
+       margin-left: 500px;
+      
+       position: absolute;
+      
 }
 
-.bot img {
+.bottom img {
     /* height: 361px; */
     width: 85.38rem;
 }

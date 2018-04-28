@@ -12,8 +12,9 @@
 	<link rel="stylesheet" href="../../css/join.css" />
 	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 	<script src="../../js/md5.js"></script>
-	<!-- <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script> -->
-	<script src="./md5.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+
+	<script src="../../js/siteLoad.js"></script>
 
 
 
@@ -30,14 +31,15 @@
 				<form id="joinForm">
 					<input type="text" placeholder="您的姓名*" name="userName" required />
 					<br/>
-					<input type="text" placeholder="您的手机号码*" value="18260621650" id="ph" name="phoneNumber"  required/>
+					<input type="text" placeholder="您的手机号码*" id="ph" name="phoneNumber" required/>
 					<br/>
-					<input type="email" placeholder="您的邮箱*" name="email" required  />
+					<input type="email" placeholder="您的邮箱*" name="email" required />
 					<br/>
-					<textarea class="fr" name="message" id="advice" placeholder="留言(必填)"  required></textarea>
+					<textarea class="fr" name="message" id="advice" placeholder="留言(必填)" required></textarea>
 					<input type="text" id="hide" name="token" />
 					<p>工作人员将尽快与您取得联系(三个工作日之内)</p>
 					<button type="button" id="btn">提交</button>
+					<button type="reset" id="hide" id="btn">提交</button>
 				</form>
 
 
@@ -53,14 +55,8 @@
 </html>
 <script>
 	$(function () {
-
-
-
-
-
 		// 表單提交
 		$("#btn").click(function () {
-			
 			function p(s) {
 				return s < 10 ? '0' + s : s;
 			}
@@ -71,43 +67,49 @@
 				var month = myDate.getMonth() + 1;
 				var date = myDate.getDate();
 				var h = myDate.getHours();
-				var m = myDate.getMinutes().toString().substring(0,2);
-				
-				
-				var s =0;
-				return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) ;
-				console.log(m)
+				var m = myDate.getMinutes().toString().substring(0, 2);
+				var s = 0;
+				return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m);
 			}
-			// let requireData = $.md5("mixiusi" + GetNowTime());
 
-			
-			var phoneNumber =$("#ph").attr("value");
+			var phoneNumber = $("#ph").val();
+			console.log(phoneNumber)
 			var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
-			console.log(phoneNumber+"電話號碼");
-			console.log(GetNowTime()+"------銘文時間-----")
-			
-			console.log("mixiusi" + GetNowTime() + phoneNumber+"---銘文需要的數據-++++--")
 
 			$("#hide").attr("value", requireData);
 			var newData = $('#joinForm').serialize();
-			// console.log(newData+"------")
-
 			$.ajax({
 				type: "POST",
 				url: 'http://47.98.164.44:8081/joinUs/addJoiner',
 				data: newData,
-				success: function (response) {
-					console.log(newData)
-					console.log("加盟成功了哈! 等待客服聯繫.")
-					/* if (status = 200) {
+				success: function (result) {
+
+					if (result.code = '0000') {
+						console.log("加盟成功")
 						window.location.href = '../submit_success/submitSucseccfully.html'
-					} */
+						$("#reset").reset()
+					} else if (result.code = '0001') {
+						console.log("代碼執行異常")
+
+
+					} else if (result.code = '0002') {
+						console.log("电话号码格式錯誤")
+
+					} else if (result.code = '0003') {
+						console.log("用戶名為空")
+
+
+					} else if (result.code = '0004') {
+						console.log("郵箱格式錯誤")
+					} else {
+						console.log("描述信息为空")
+					}
 				},
-				error: function (request) {
-					console.log(newData)
+				error: function () {
 					console.log("加盟失敗")
 				}
 			});
+
 		});
 
 

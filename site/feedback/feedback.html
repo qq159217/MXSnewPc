@@ -41,7 +41,7 @@
                         <div class="ipt fl">
                             <input type="text" placeholder="您的姓名*" name="nickName" id="nickName">
                             <br>
-                            <input type="text" placeholder="您的手机号码*" name="phoneNumber" id="phoneNumber" required>
+                            <input type="text" placeholder="您的手机号码*" name="phoneNumber" id="ph" required>
                             <br>
                             <input type="email" placeholder="您的邮箱*" name="email" id="email" required>
                             <br>
@@ -67,47 +67,54 @@
 
 
 <script src="./md5.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#feedbackBtn").click(function () {
+<script>
+    $(function () {
+    function GetNowTime() {
+        var myDate = new Date()
+        var year = myDate.getFullYear()
+        var month = myDate.getMonth() + 1
+        var date = myDate.getDate()
+        var h = myDate.getHours()
+        var m = myDate.getMinutes().toString().substring(0, 2)
+        var s = 0
+        return year + '-' + p(month) + '-' + p(date) + ' ' + p(h) + ':' + p(m)
+    }
 
+    var phoneNumber = $('#ph').val()
+    console.log(phoneNumber)
+    var requireData = $.md5('mixiusi' + GetNowTime() + phoneNumber)
 
-            function p(s) {
-                return s < 10 ? '0' + s : s;
+    $('#hide').attr('value', requireData)
+    var newData = $('#feedbackForm').serialize()
+    $.ajax({
+        type: 'POST',
+        url: 'http://47.98.164.44:8081/feedback/addFeedback',
+        data: newData,
+        success: function (result) {
+            if (result.code = '0000') {
+                console.log('加盟成功')
+                window.location.href = '../submit_success/submitSucseccfully.html'
+                $('#reset').reset()
+            } else if (result.code = '0001') {
+                console.log('代碼執行異常')
+            } else if (result.code = '0002') {
+                console.log('电话号码格式錯誤')
+                $('#ph').HTML('电话号码格式错误')
+            } else if (result.code = '0003') {
+                console.log('用戶名為空')
+                $('#nickName').HTML('用戶名為空')
+            } else if (result.code = '0004') {
+                $('#email').HTML('郵箱格式錯誤')
+                console.log('郵箱格式錯誤')
+            } else {
+                console.log('描述信息为空')
+                $('#advice').HTML('描述信息错误')
             }
-
-            var GetNowTime = function () {
-                var myDate = new Date();
-                var year = myDate.getFullYear();
-                var month = myDate.getMonth() + 1;
-                var date = myDate.getDate();
-                var h = myDate.getHours();
-                var m = myDate.getMinutes();
-                var s = myDate.getSeconds();
-                return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m) + ":" + p(s);
-            }
-            // console.log("mixiusi" + GetNowTime());
-
-            let tokenValue = $.md5("mixiusi" + GetNowTime());
-            $("#hide").attr("value", tokenValue);
-            let newData = $('#feedbackForm').serialize();
-           
-         
-            $.ajax({
-                type: "POST",
-                url: 'http://mixiusi.com.cn:8081/feedback/addFeedback',
-                data: newData,
-                success: function (result) {
-                    alert("提交成功")
-
-                },
-            });
- 
-
-
-
-
-
-        });
-    });
+        },
+        error: function () {
+            console.log('加盟失敗')
+        }
+    })
+    })
+    })
 </script>

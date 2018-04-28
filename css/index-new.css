@@ -142,7 +142,7 @@ ul {
 
 .menu .item {
     height: 17px;
-    font-size: 12px;
+    font-size: 14px;
     float: left;
     margin-right: 91px;
     margin-top: 28px;
@@ -188,6 +188,7 @@ ul {
 .homepage p {
     display: block;
     font-size: 16px;
+    font-weight: 400;
     height: 37px;
     position: relative;
     /* top: 13.31rem;
