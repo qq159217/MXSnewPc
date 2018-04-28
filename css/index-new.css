@@ -519,7 +519,7 @@ ul {
 .feedback .ipt {
     width: 414px;
     height: 350px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid #4A9083;
     border-radius: 30px;
     padding-left: 20px;
@@ -551,7 +551,7 @@ ul {
     width: 441px;
     height: 350px;
     margin-right: 2.75rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     padding: 15px;
     box-sizing: border-box;
