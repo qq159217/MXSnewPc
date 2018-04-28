@@ -222,7 +222,7 @@ ul {
     width: 593px;
     height: 566px;
     margin-right: 93PX;
-    background-color: #F6F8FA;
+    background-color: #F3F8FA;
     border: #F6F8FA 1px solid;
     padding: 97px 52px 0 38px;
     box-sizing: border-box;
@@ -232,7 +232,8 @@ ul {
 }
 
 .section-02 .content .fr .TEXT {
-    text-indent: 20PX;
+    text-indent: 30PX;
+    line-height: 50px;
 }
 
 .fl_bottom {
