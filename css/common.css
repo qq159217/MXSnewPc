@@ -23,7 +23,8 @@ span
     margin: 0;
     padding: 0;
     font-weight: 400;
-    font-family: "PingFangSC-Thin";
+    /* font-family: "PingFangSC-Thin"; */
+    font-family:'PingFangEL11b013ef831cab3';
 }
 
 ul {

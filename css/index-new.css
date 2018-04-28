@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'PingFangSC-Thin';
     src: url('../fonts/PingFang Light.ttf');
 }
@@ -23,7 +23,7 @@ body {
     font-family: 'PingFang Medium-Thin';
     src: url('../fonts/PingFang Medium.ttf');
 }
-
+ */
 * {
     margin: 0;
     padding: 0;
