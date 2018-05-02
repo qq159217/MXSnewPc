@@ -656,7 +656,7 @@ p#connect {
     width: 56px;
     height: 60px;
     color: #FCBB08;
-    background-image: url("http://47.98.164.44/bg/icon.png");
+    background-image: url("../images/common/icon.png");
     /* background-repeat: no-repeat;  */
     background-size: 56px 60px;
     cursor: pointer;
