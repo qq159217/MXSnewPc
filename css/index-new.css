@@ -14,20 +14,6 @@ body {
     overflow: hidden;
 }
 
-/* @font-face {
-    font-family: 'PingFangSC-Thin';
-    src: url('../fonts/PingFang Light.ttf');
-}
-
-@font-face {
-    font-family: 'PingFang Medium-Thin';
-    src: url('../fonts/PingFang Medium.ttf');
-}
- */
-* {
-    margin: 0;
-    padding: 0;
-}
 
 .mxs_container {
     width: 1366px;
