@@ -17,19 +17,19 @@
     font-family: '微软雅黑';
 }
 
-button {
-    margin-top: 100px;
+#returnHomepage {
+    /* margin-top: 100px; */
     /* position: relative; */
     display: block;
-    margin: 0 auto;
+    margin: 100px auto;
     width: 162px;
     height: 44px;
-    color: #fff;
+    line-height: 36px;
+    color: #000;
     font-size: 18px;
-    border: 0;
-    outline: 0;
+    cursor: pointer;
     background-color: #6DB3FA;
     border: 2px solid #fff;
-    border-radius: 20px;
+    border-radius: 22px;
     font-family: '微软雅黑';
 }

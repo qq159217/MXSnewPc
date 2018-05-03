@@ -82,6 +82,7 @@ textarea {
     top: 325px;
     font-size: 20px;
     line-height: 62px;
+    cursor: pointer;;
 }
 
 #joinForm p {

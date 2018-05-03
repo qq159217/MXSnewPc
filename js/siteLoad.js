@@ -51,5 +51,10 @@ $(function () {
             });
         }); */
 
+// return honmepage
 
+$("#returnHomepage").click(function(){
+   
+    window.location.replace("../../index.html")
+})
 })

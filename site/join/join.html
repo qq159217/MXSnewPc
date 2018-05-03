@@ -18,11 +18,48 @@
 	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 	<script src="../../js/siteLoad.js"></script>
 
-	<script>
-		$(function () {
-			// 表單提交
-			$("#btn").click(function () {
-				function p(s) {
+
+
+
+</head>
+
+<body>
+	<div id="top"></div>
+	<div class="joinbj  ">
+		<div class="box_shadow">
+			<div class="join mxs_container ">
+				<h2> 加盟合作 </h2>
+
+				<form id="joinForm" >
+					<input type="text" placeholder="您的姓名*" name="userName" required />
+					<br/>
+					<input type="text" placeholder="您的手机号码*" id="ph" name="phoneNumber" required/>
+					<br/>
+					<input type="email" placeholder="您的邮箱*" name="email" required />
+					<br/>
+					<textarea class="fr" name="message" id="advice" placeholder="留言(必填)" required></textarea>
+					<input type="text" id="hide" name="token" />
+					<p>工作人员将尽快与您取得联系(三个工作日之内)</p>
+					<button type="button" id="btn">提交</button>
+				</form>
+
+
+				<div class="messageL ">客服热线:000-100-9000</div>
+				<div class="messageR ">加盟热线:000-000-9000</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+
+<script>
+	$(function () {
+		// 表單提交
+		$("#btn").click(function () {
+			function p(s) {
 					return s < 10 ? '0' + s : s;
 				}
 
@@ -75,44 +112,12 @@
 					}
 				});
 
-			});
 
 
-		})
-	</script>
+
+			console.log("惦記我")
+		});
 
 
-</head>
-
-<body>
-	<div id="top"></div>
-	<div class="joinbj  ">
-		<div class="box_shadow">
-			<div class="join mxs_container ">
-				<h2> 加盟合作 </h2>
-
-				<form id="joinForm">
-					<input type="text" placeholder="您的姓名*" name="userName" required />
-					<br/>
-					<input type="text" placeholder="您的手机号码*" id="ph" name="phoneNumber" required/>
-					<br/>
-					<input type="email" placeholder="您的邮箱*" name="email" required />
-					<br/>
-					<textarea class="fr" name="message" id="advice" placeholder="留言(必填)" required></textarea>
-					<input type="text" id="hide" name="token" />
-					<p>工作人员将尽快与您取得联系(三个工作日之内)</p>
-					<button type="button" id="btn">提交</button>
-					<button type="reset" id="" id="btn">提交</button>
-				</form>
-
-
-				<div class="messageL ">客服热线:000-100-9000</div>
-				<div class="messageR ">加盟热线:000-000-9000</div>
-			</div>
-		</div>
-	</div>
-
-
-</body>
-
-</html>
+	})
+</script>

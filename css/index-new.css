@@ -546,6 +546,7 @@ ul {
     position: absolute;
     left: 1005px;
     top: 374px;
+    cursor: pointer;
 }
 
 .feedback textarea {
