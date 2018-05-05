@@ -20,38 +20,6 @@
     <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 
     <script>
-        $(document).ready(function () {
-            // 在键盘按下并释放及提交后验证提交表单
-            $("#feedbackForm").validate({
-                rules: {
-                    nickName: {
-                        required: true
-                    },
-                    advice: {
-                        required: true,
-                        minlength: 2,
-                        maxlength: 200
-                    },
-                    ph: {
-                        required: true,
-                        maxlength: 11
-                    },
-
-                    email: {
-                        required: true,
-                        email: true
-                    }
-
-                },
-                messages: {
-                    nickName: "用户名为空",
-                    advice: "描述信息为空",
-                    ph: "电话号码格式错误",
-                    email: "邮箱格式错误",
-
-                }
-            });
-        });
     </script>
 
 
@@ -70,6 +38,8 @@
 </head>
 
 <body>
+<script src="../../js/md5.js"></script>
+    
     <!--nav -->
     <div id="top"></div>
     <!-- 反馈界面 -->
@@ -80,21 +50,22 @@
                     <h2>
                         反馈
                     </h2>
-                    <form id="feedbackForm" autocomplete="off">
+                    <form id="feedbackForm" autocomplete="off ">
                         <div class="fl ">
-                            <textarea autocomplete="off" name="advice" id="advice" name="advice" placeholder="请在此留下您的宝贵意见"></textarea>
+                            <textarea autocomplete="off" name="advice" id="advice" name="advice" placeholder="请在此留下您的宝贵意见">
+                            </textarea>
                         </div>
                         <div class="ipt fl">
                             <input type="text" placeholder="您的姓名*" required name="nickName" id="nickName" autocomplete="off ">
                             <br>
-                            <input type="text " placeholder="您的手机号码* " name="ph" id="phoneNnmber" required autocomplete="off">
+                            <input type="text " placeholder="您的手机号码* " name="ph " id="ph " required autocomplete="off">
                             <br>
-                            <input type="email" placeholder="您的邮箱*" name="email" id="email" required autocomplete="off">
+                            <input type="email" placeholder="您的邮箱*" name="email" id="email" required autocomplete="off ">
                             <br>
-                            <input type="text" placeholder="您的qq" name="qqNumber" id="qqNumber" autocomplete="off">
+                            <input type="text " placeholder="您的qq " name="qqNumber " id="qqNumber " autocomplete="off">
                             <br>
-                            <input type="text" placeholder="您的微信" name="weChat" id="weChat" autocomplete="off">
-                            <input type="text" id="hide " name="token " autocomplete="off">
+                            <input type="text" placeholder="您的微信" name="weChat" id="weChat" autocomplete="off ">
+                            <input type="text " id="hide " name="token " autocomplete="off">
 
                             <div>
                                 <p class="message">工作人员将尽快与您取得联系( 三个工作日内)</p>
@@ -122,43 +93,41 @@
     })
 </script>
 
-<script src="../../js/md5.js"></script>
 
 
 <script>
     $(function () {
 
 
-        function p(s) {
-            return s < 10 ? '0' + s : s;
-        }
-
-        function GetNowTime() {
-            var myDate = new Date()
-            var year = myDate.getFullYear()
-            var month = myDate.getMonth() + 1
-            var date = myDate.getDate()
-            var h = myDate.getHours()
-            var m = myDate.getMinutes().toString().substring(0, 2)
-            var s = 0
-            return year + '-' + p(month) + '-' + p(date) + ' ' + p(h) + ':' + p(m)
-        }
 
 
-
-
-
-            var phoneNumber = $("#phoneNnmber").val()
-            var requireData = $.md5('mixiusi' + GetNowTime() + phoneNumber)
         $("#feedbackBtn").click(function () {
-            console.log(phoneNumber )
+            function p(s) {
+                return s < 10 ? '0' + s : s;
+            }
 
-            
+            function GetNowTime() {
+                var myDate = new Date()
+                var year = myDate.getFullYear()
+                var month = myDate.getMonth() + 1
+                var date = myDate.getDate()
+                var h = myDate.getHours()
+                var m = myDate.getMinutes().toString().substring(0, 2)
+                var s = 0
+                return year + '-' + p(month) + '-' + p(date) + ' ' + p(h) + ':' + p(m)
+            }
+
+            var phoneNumber = $('#ph').val()
+
+            var requireData = $.md5('mixiusi' + GetNowTime() + phoneNumber)
+
+            console.log(phoneNumber)
+            console.log(requireData + "表单数据")
 
 
             $('#hide').attr('value', requireData)
+            console.log(newData + "newData")
             var newData = $('#feedbackForm').serialize()
-
             if (newData != "") {
                 $.ajax({
                     type: 'POST',
@@ -174,7 +143,9 @@
                     },
 
                     error: function (responce) {
-                        console.log("error")
+                        window.location.href =
+                            '../submit_success/submitSucseccfully.html'
+                        $('#reset').reset()
 
                     }
                 })

@@ -32,11 +32,11 @@
         <h2> 加盟合作 </h2>
 
         <form id="joinForm">
-          <input type="text" placeholder="您的姓名*" name="userName" required />
+          <input type="text" placeholder="您的姓名*" name="userName" required id="name" />
           <br/>
           <input type="text" placeholder="您的手机号码*" id="ph" name="phoneNumber" required/>
           <br/>
-          <input type="email" placeholder="您的邮箱*" name="email" required />
+          <input type="email" placeholder="您的邮箱*" id="email" name="email" required />
           <br/>
           <textarea class="fr" name="message" id="advice" placeholder="留言(必填)" required></textarea>
           <input type="text" id="hide" name="token" />
@@ -60,6 +60,7 @@
   $(function () {
     $("#top").load("../common/common.html")
 
+
     function p(s) {
       return s < 10 ? '0' + s : s;
     }
@@ -75,14 +76,33 @@
       return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m);
     }
 
-    var phoneNumber = $("#ph").val();
-
-    var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
-
-
-
     $("#btn").click(function () {
+
+      if ($("#name").val() == '') {
+        alert("请输入姓名");
+        return;
+      }
+      if (!/^1[0-9]{10}$/g.test($("#ph").val())) {
+        alert("请输入正常的手机号码");
+        return;
+      }
+      if (!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test($("#email").val())) {
+        alert("请输入正确的邮箱");
+        return;
+      }
+      if ($("#advice").val() == '') {
+        alert("请输入留言");
+        return;
+      }
+
+      var phoneNumber = $("#ph").val();
+
+      var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
+
+
       $("#hide").attr("value", requireData);
+
+
 
 
       var newData = $("#joinForm").serialize();
@@ -107,9 +127,6 @@
 
         error: function (data) {
           console.log("加盟失败" + data)
-
-
-
         }
 
       });
