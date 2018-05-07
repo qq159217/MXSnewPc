@@ -16,7 +16,7 @@ body {
 
 
 .mxs_container {
-    /* width: 1566px; */
+    width: 1366px;
     margin: 0 auto;
     position: relative;
 }
@@ -199,13 +199,13 @@ ul {
 }
 
 .section-02 .fl img {
-    width: 36.19rem;
+    width: 579px;
     height: 33.38rem;
-    margin-right: 6.31rem;
+    margin-right: 101PX;
 }
 
 .section-02 .content .fr {
-    width: 37.06rem;
+    width: 593px;
     height: 566px;
     margin-right: 93PX;
     background-color: #F3F8FA;

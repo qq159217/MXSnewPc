@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Validate 插件 - 与表单（Form）插件的交互（AJAX 提交）</title>
+<link rel="stylesheet" media="screen" href="http://static.runoob.com/assets/jquery-validation-1.14.0/demo/css/screen.css">
+<style type="text/css">
+.warning { color: red; }
+</style>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.mockjax.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib//jquery.form.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script>
+jQuery(function() {
+  $.mockjax({
+    url: "login.action",
+    response: function(settings) {
+      var user = settings.data.match(/user=(.+?)($|&)/)[1],
+        password = settings.data.match(/password=(.+?)($|&)/)[1];
+      if (password !== "foobar") {
+        this.responseText = "Your password is wrong (must be foobar).";
+        return;
+      }
+      this.responseText = "Hi " + user + ", welcome back.";
+    },
+    responseStatus: 200,
+    responseTime: 500
+  });
+
+  // show a simple loading indicator
+  var loader = jQuery('<div id="loader"><img src="images/loading.gif" alt="loading..."></div>')
+    .css({
+      position: "relative",
+      top: "1em",
+      left: "25em",
+      display: "inline"
+    })
+    .appendTo("body")
+    .hide();
+  jQuery().ajaxStart(function() {
+    loader.show();
+  }).ajaxStop(function() {
+    loader.hide();
+  }).ajaxError(function(a, b, e) {
+    throw e;
+  });
+
+  var v = jQuery("#form").validate({
+    submitHandler: function(form) {
+      jQuery(form).ajaxSubmit({
+        target: "#result"
+      });
+    }
+  });
+
+  jQuery("#reset").click(function() {
+    v.resetForm();
+  });
+});
+</script>
+
+</head>
+<body>
+
+<div id="main">
+
+<form method="post" class="cmxform" id="form" action="form-action.php">
+  <fieldset>
+    <legend>登录表单（输入 "foobar" 作为密码）</legend>
+    <p>
+      <label for="user">用户名</label>
+      <input id="user" name="user" title="请输入您的用户名哈哈哈（至少 3 个字符）" class="required" minlength="3" />
+     
+    </p>
+    <p>
+      <label for="user">时间</label>
+      
+      <input id="user" name="user" title="什么时候破" class="required" minlength="3" />
+    </p>
+    <p>
+      <label for="pass">密码</label>
+      <input type="password" name="password" id="password" class="required" minlength"5" />
+    </p>
+    <p>
+      <input class="submit" type="submit" value="登录"/>
+    </p>
+  </fieldset>
+</form>
+
+<div id="result" class="warning">请登录！</div>
+
+<br/>
+
+<button id="reset">重置上面的表单！</button>
+
+</div>
+
+
+</body>
+</html> 

@@ -16,7 +16,9 @@
 
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
   <script src="./md5.js"></script>
-  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+
+
+  <script src="./form.js"></script>
 
 
 
@@ -31,17 +33,17 @@
       <div class="join mxs_container ">
         <h2> 加盟合作 </h2>
 
-        <form id="joinForm">
-          <input type="text" placeholder="您的姓名*" name="userName" required id="name" />
+        <form id="joinForm" action="javascriopt:">
+          <input type="text" placeholder="您的姓名*" name="userName"  />
           <br/>
-          <input type="text" placeholder="您的手机号码*" id="ph" name="phoneNumber" required/>
+          <input type="text" placeholder="您的手机号码*" id="phoneNumber" name="phoneNumber" />
           <br/>
-          <input type="email" placeholder="您的邮箱*" id="email" name="email" required />
+          <input type="email" placeholder="您的邮箱*" name="email"  />
           <br/>
-          <textarea class="fr" name="message" id="advice" placeholder="留言(必填)" required></textarea>
+          <textarea class="fr" name="message" id="advice" placeholder="留言(必填)" ></textarea>
           <input type="text" id="hide" name="token" />
           <p>工作人员将尽快与您取得联系(三个工作日之内)</p>
-          <button type="button" id="btn">提交</button>
+          <button id="btn" type="text">提交</button>
         </form>
 
 
@@ -58,79 +60,12 @@
 
 <script>
   $(function () {
-    $("#top").load("../common/common.html")
+  //  $("#top").load("../common/common.html")
 
+    /*  $("#btn").click(function (e) {
+      console.log("testHaha")
+      e.preventDefault()
+    }) */
 
-    function p(s) {
-      return s < 10 ? '0' + s : s;
-    }
-
-    function GetNowTime() {
-      var myDate = new Date();
-      var year = myDate.getFullYear();
-      var month = myDate.getMonth() + 1;
-      var date = myDate.getDate();
-      var h = myDate.getHours();
-      var m = myDate.getMinutes().toString().substring(0, 2);
-      var s = 0;
-      return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m);
-    }
-
-    $("#btn").click(function () {
-
-      if ($("#name").val() == '') {
-        alert("请输入姓名");
-        return;
-      }
-      if (!/^1[0-9]{10}$/g.test($("#ph").val())) {
-        alert("请输入正常的手机号码");
-        return;
-      }
-      if (!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test($("#email").val())) {
-        alert("请输入正确的邮箱");
-        return;
-      }
-      if ($("#advice").val() == '') {
-        alert("请输入留言");
-        return;
-      }
-
-      var phoneNumber = $("#ph").val();
-
-      var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
-
-
-      $("#hide").attr("value", requireData);
-
-
-
-
-      var newData = $("#joinForm").serialize();
-
-      console.log(phoneNumber + "电话号码");
-      console.log(newData + "序列化");
-
-
-
-      $.ajax({
-        type: "post",
-        url: 'http://47.98.164.44:8081/joinUs/addJoiner',
-        data: newData,
-        success: function (data) {
-          console.log(data)
-          if (data.code = '0000') {
-            console.log("加盟成功")
-            window.location.href = "../submit_success/submitSucseccfully.html"
-            $("#reset").reset()
-          }
-        },
-
-        error: function (data) {
-          console.log("加盟失败" + data)
-        }
-
-      });
-
-    })
   })
 </script>
