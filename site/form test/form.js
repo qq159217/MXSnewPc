@@ -14,13 +14,13 @@ $(function () {
     var s = 0
     return year + '-' + p(month) + '-' + p(date) + ' ' + p(h) + ':' + p(m)
   }
-  // jquery("#top").load("../common/common.html")
+  
   $('#btn').click(function (e) {
     e.preventDefault()
 
     var phoneNumber = $('#phoneNumber').val()
-    var encipher = $.md5('mixiusi' + GetNowTime() + phoneNumber)
-    console.log(encipher + "数据加密" + "电话好吗" + phoneNumber)
+   var encipher = $.md5('mixiusi' + GetNowTime() + phoneNumber)
+    console.log(encipher + "数据加密" + "电话号码" + phoneNumber) 
     // 添加token
 
     $("#hide").attr("value", encipher);
@@ -60,44 +60,9 @@ $(function () {
 
       }
 
-    });
-    
-  })
+    }); 
 
-  /* $('#top').load('../common/common.html')
-  function p (s) {
-    return s < 10 ? '0' + s : s
-  }
-
-  function GetNowTime () {
-    var myDate = new Date()
-    var year = myDate.getFullYear()
-    var month = myDate.getMonth() + 1
-    var date = myDate.getDate()
-    var h = myDate.getHours()
-    var m = myDate.getMinutes().toString().substring(0, 2)
-    var s = 0
-    return year + '-' + p(month) + '-' + p(date) + ' ' + p(h) + ':' + p(m)
-  }
-
-  //   console.log('电话号码2' + phoneNumber)
-
-//   var jm = $.md5('hahahah hahahahah')
-  console.log(jm)
-  $('#btn').click(function (e) {
-      e.preventDefault()
-
-    let phoneNumber = $('#ph').val()
-    console.log('电话号码' + phoneNumber)
-    var requireData = $.md5('mixiusi' + GetNowTime() + phoneNumber)
-    console.log('testHaha加密 是我写错了' + requireData)
-  })*/
-
+  });
+  $("#top").load("../common/common.html")
+  
 })
-
-/* $(document).ready(function(){
-    $("#subBtn").click(function(){
-        var  ph  = $("#ph").val())
-        console.log($.md5("hahahah woshi xioa huajia ")+new Date()+ph)
-    })
-}) */

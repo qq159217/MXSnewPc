@@ -15,7 +15,8 @@ button,
 input,
 h3,
 h4,
-h5 a,
+h5,
+a,
 span {
     margin: 0;
     padding: 0;
@@ -93,13 +94,30 @@ input {
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    
 }
 
-input:focus{
+input:focus {
     /* background-color: red; */
+}
+
+.mxs_container {
+    /* width:1366px; */
+    margin: 0 auto;
+    position: relative;
 }
 
 /* input:-webkit-autofill { 
     -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,1) inset; 
     } */
+
+@media only screen and (max-width: 1366px) {
+    .mxs_container {
+        width:1024px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .mxs_container {
+        width:1366px;
+    }
+}

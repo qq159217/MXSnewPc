@@ -15,7 +15,7 @@
   <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
 
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-  <script src="./md5.js"></script>
+  <script src="../../js/md5.js"></script>
   <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 
 
@@ -26,9 +26,10 @@
 
 <body>
   <div id="top"></div>
-  <div class="joinbj  ">
+  <div class="joinbj ">
     <div class="box_shadow">
-      <div class="join mxs_container ">
+     <div class="mxs_container">
+      <div class="join ">
         <h2> 加盟合作 </h2>
 
         <form id="joinForm">
@@ -48,6 +49,7 @@
         <div class="messageL ">客服热线:000-100-9000</div>
         <div class="messageR ">加盟热线:000-000-9000</div>
       </div>
+     </div>
     </div>
   </div>
 
@@ -75,13 +77,14 @@
       return year + '-' + p(month) + "-" + p(date) + " " + p(h) + ':' + p(m);
     }
 
-    var phoneNumber = $("#ph").val();
 
-    var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
 
 
 
     $("#btn").click(function () {
+      var phoneNumber = $("#ph").val();
+
+      var requireData = $.md5("mixiusi" + GetNowTime() + phoneNumber);
       $("#hide").attr("value", requireData);
 
 

@@ -12,14 +12,113 @@ body {
     -webkit-transition: all .5s ease;
     font-size: 14px;
     overflow: hidden;
-}
-
-
-.mxs_container {
-    width: 1366px;
     margin: 0 auto;
-    position: relative;
 }
+
+/* 响应式布局 */
+@media only screen and (max-width: 1366px) {
+    body {
+        /* border:3px dashed #FF09FF;  */
+    }
+    nav {
+        margin-left: 20px;
+    }
+   
+    .menu .item {
+        margin-right: 68px;
+    }
+    .section-02 .fl img {
+        width: 434px;
+        /* height: 33.38rem; */
+        margin-right: 76PX;
+    }
+    .section-02 .fl {
+        margin-top: 240px;
+    }
+    .section-02 .content .fr {
+        width: 510px;
+        height: 566px;
+        margin-right: auto;
+        background-color: #F3F8FA;
+        border: #F6F8FA 1px solid;
+        padding: 60px 52px 0 38px;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 30px;
+        color: #8E9091;
+    }
+    .section-03 .fl img {
+        margin-top: -5px;
+        width: 386px;
+    }
+    /* 产品 */
+    .section-03 .mid .txt {
+        /* width: 340px; */
+    }
+    /* 反馈界面 */
+    .feedback textarea,
+    .feedback .ipt {
+        width: 332px;
+    }
+    .feedback input {
+        width: 300px;
+    }
+    .feedback .submit {
+        left: 110px;
+    top: -30px;
+    width: 60px;
+
+    }
+    #container {width: 450px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+  
+    .menu .item {
+        margin-right: 91px;
+    }
+    .section-02 .fl img {
+        width: 579px;
+        height: 33.38rem;
+        margin-right: 101PX;
+    }
+    .section-02 .fl {
+        margin-top: 111px;
+        /* background: url('../images/bj/ball-half.png'); */
+    }
+    .section-02 .content .fr {
+        width: 593px;
+        height: 566px;
+        margin-right: 93PX;
+        background-color: #F3F8FA;
+        border: #F6F8FA 1px solid;
+        padding: 97px 52px 0 38px;
+        box-sizing: border-box;
+        font-size: 18px;
+        line-height: 30px;
+        color: #8E9091;
+    }
+    /* 产品 */
+    /* 反馈 */
+    .feedback textarea,
+    .feedback .ipt {
+        width: 414px;
+    }
+    .feedback input {
+        width: 370px;
+    }
+    .feedback .submit{
+        position: relative;
+      left: 110px;
+    top: -26px;
+    }
+
+    #container {width: 699px;
+    }
+}
+
+
 
 .conpanybj,
 .feedbackbj,
@@ -28,36 +127,43 @@ body {
 .warebj {
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .homepagebj {
     opacity: 1;
-    background-image: url("../images/common/banner.png")
+    background-image: url("../images/common/banner.png");
+    background-repeat: no-repeat;
 }
 
 .joinbj {
     opacity: 1;
-    background-image: url("../images/bj/join.png")
+    background-image: url("../images/bj/join.png");
+    background-repeat: no-repeat;
 }
 
 .feedbackbj {
     opacity: 1;
-    background-image: url("../images/bj/feedback.png")
+    background-image: url("../images/bj/feedback.png");
+    background-repeat: no-repeat;
 }
 
 .conpanybj {
     opacity: 1;
-    background-image: url("../images/bj/ball.png")
+    background-image: url("../images/bj/ball.png");
+    background-repeat: no-repeat;
 }
 
 .warebj {
     opacity: 1;
-    background-image: url('../images/coffeetree.png')
+    background-image: url('../images/coffeetree.png');
+    background-repeat: no-repeat;
 }
 
 .prodbj {
     opacity: 1;
-    background-image: url("../images/common/cafemaker-full.jpg")
+    background-image: url("../images/common/cafemaker-full.jpg");
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -130,13 +236,13 @@ ul {
     height: 17px;
     font-size: 14px;
     float: left;
-    margin-right: 91px;
+    /* margin-right: 91px; */
     margin-top: 28px;
     color: #50e3c2
 }
 
-.menu :last-child {
-    /* margin-right: 26px; */
+li.item:last-child {
+    margin-right: 10px;
 }
 
 .topNav .menu .item a {
@@ -155,7 +261,6 @@ ul {
 /* 首页 */
 
 .section-01 .content {
-    text-align: center;
     text-align: center;
 }
 
@@ -190,31 +295,6 @@ ul {
     margin-left: 49px;
     margin-top: 94px;
     color: #525252;
-}
-
-.section-02 .fl {
-  
-    margin-top: 111px;
-    /* background: url('../images/bj/ball-half.png'); */
-}
-
-.section-02 .fl img {
-    width: 579px;
-    height: 33.38rem;
-    margin-right: 101PX;
-}
-
-.section-02 .content .fr {
-    width: 593px;
-    height: 566px;
-    margin-right: 93PX;
-    background-color: #F3F8FA;
-    border: #F6F8FA 1px solid;
-    padding: 97px 52px 0 38px;
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 30px;
-    color: #8E9091;
 }
 
 .section-02 .content .fr .TEXT {
@@ -276,7 +356,7 @@ ul {
 /* 产品介绍 */
 
 .section-03 .fr {
-    width: 41.5rem;
+    /* width: 41.5rem; */
     /* margin-top: 68px; */
     /* margin-left: 85px; */
 }
@@ -410,16 +490,14 @@ ul {
 /*join 加盟合作 */
 
 .section-04 .content {
-    text-align: center;
     margin: 0 auto;
     padding-top: 124px;
 }
 
 .section-04 .content .join {
-    /* border: #86FFFF solid 3px; */
-    /* text-align: left; */
-    /* margin-left: 33.45em; */
+    text-align: center;
     margin-bottom: 100px;
+    padding-left: 43.5%;
 }
 
 .section-04 .content .join img {
@@ -427,6 +505,7 @@ ul {
     height: 176px;
     vertical-align: bottom;
     margin-bottom: 8px;
+    display: block;
 }
 
 .section-04 .content .join a {
@@ -435,7 +514,6 @@ ul {
     background-color: #FF09FF;
     display: block;
     text-align: center;
-    margin-left: 42%;
     border-radius: 10px;
     padding-top: 10px;
     margin-top: 8px;
@@ -473,21 +551,24 @@ ul {
     margin-bottom: 16px;
 }
 
-/* 反馈 */
+/* 反馈界面 */
+
+.feedback {
+    padding-left: 15.94%;
+}
 
 .feedback h2 {
+    text-align: left;
     color: #fff;
     margin-bottom: 32px;
     font-weight: normal;
     /* height: 34px; */
     line-height: 34px;
-    margin-left: 15.25rem;
-    width: 142px;
     font-size: 34px;
 }
 
 .feedback form {
-    margin-left: 15.25rem;
+    text-align: center;
 }
 
 .feedback fl,
@@ -497,14 +578,13 @@ ul {
 }
 
 .feedback input {
-    width: 370px;
+    /* width: 370px; */
     height: 55px;
     line-height: 55px;
     border-bottom: 1px solid #ACC3CF;
 }
 
 .feedback .ipt {
-    width: 414px;
     height: 350px;
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid #4A9083;
@@ -521,6 +601,7 @@ ul {
     margin-top: -20px;
     font-size: 12px;
     color: #86FFFF;
+    text-align-last: left;
 }
 
 .submit {
@@ -529,14 +610,14 @@ ul {
     height: 38px;
     border-radius: 5px;
     background-color: #32FFFF;
-    position: absolute;
-    left: 1005px;
-    top: 374px;
+    position: relative;
+   /*  left: 1005px;
+    top: 545px; */
     cursor: pointer;
 }
 
 .feedback textarea {
-    width: 441px;
+    /* width: 441px; */
     height: 350px;
     margin-right: 2.75rem;
     background-color: rgba(0, 0, 0, 0.3);
@@ -654,7 +735,7 @@ p#connect {
 }
 
 #container {
-    width: 730px;
+    
     height: 700px;
     margin-top: 68px;
     border: 2px solid #ECE5E0;

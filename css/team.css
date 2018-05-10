@@ -62,11 +62,24 @@
       
 }
 
-.bottom img {
-    /* height: 361px; */
-    width: 85.38rem;
-}
+
 
 . mxs_container {
     width: 85.38rem;
+}
+
+
+@media only screen and (max-width: 1366px) {
+    .bottom img {
+        width: 1024px;
+        margin-top: 50px;
+        /* width: 85.38rem; */
+    }
+ 
+}
+@media only screen and (min-width: 1366px) {
+    .bottom img {
+        width: 100%;
+        /* width: 85.38rem; */
+    }
 }

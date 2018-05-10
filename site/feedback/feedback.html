@@ -114,13 +114,7 @@
 
 
 
-<script>
-    $(function () {
-        $("#top").load("../common/common.html");
 
-
-    })
-</script>
 
 <script src="../../js/md5.js"></script>
 
@@ -147,42 +141,43 @@
 
 
 
-
+        $("#feedbackBtn").click(function () {
             var phoneNumber = $("#phoneNnmber").val()
             var requireData = $.md5('mixiusi' + GetNowTime() + phoneNumber)
-        $("#feedbackBtn").click(function () {
-            console.log(phoneNumber )
-
-            
-
-
+            console.log(phoneNumber)
             $('#hide').attr('value', requireData)
             var newData = $('#feedbackForm').serialize()
 
-            if (newData != "") {
-                $.ajax({
-                    type: 'POST',
-                    url: 'http://47.98.164.44:8081/feedback/addFeedback',
-                    data: newData,
-                    success: function (result) {
-                        if (result.code = '0000') {
-                            console.log('反饋成功')
-                            window.location.href =
-                                '../submit_success/submitSucseccfully.html'
-                            $('#reset').reset()
-                        }
-                    },
 
-                    error: function (responce) {
-                        console.log("error")
-
+            $.ajax({
+                type: 'POST',
+                url: 'http://47.98.164.44:8081/feedback/addFeedback',
+                data: newData,
+                success: function (result) {
+                    if (result.code = '0000') {
+                        console.log('反饋成功')
+                        window.location.href =
+                            '../submit_success/submitSucseccfully.html'
+                        $('#reset').reset()
                     }
-                })
-            } else {
-                alert('error')
-            }
+                },
+
+                error: function (responce) {
+                    console.log("error"+"亲重新尝试")
+
+                }
+
+
+            })
 
         });
+
+    })
+</script>
+<script>
+    $(function () {
+        $("#top").load("../common/common.html");
+
 
     })
 </script>

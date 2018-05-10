@@ -2,46 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-    <script src="./md5.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script src="./md5.js"></script>
 
 
-    <script src="./form.js"></script>
+  <script src="./form.js"></script>
 </head>
 
 <body>
-    <form id="joinForm">
-            <div class="joinbj  ">
-                    <div class="box_shadow">
-                      <div class="join mxs_container ">
-                        <h2> 加盟合作 </h2>
-                
-                        <form id="joinForm" action="javascriopt:">
-                          <input type="text" placeholder="您的姓名*" name="userName" required />
-                          <br/>
-                          <input type="text" placeholder="您的手机号码*" id="ph" name="phoneNumber" required/>
-                          <br/>
-                          <input type="email" placeholder="您的邮箱*" name="email" required />
-                          <br/>
-                          <textarea class="fr" name="message" id="advice" placeholder="留言(必填)" required></textarea>
-                          <input type="text" id="hide" name="token" />
-                          <p>工作人员将尽快与您取得联系(三个工作日之内)</p>
-                          <button id="btn" type="text">提交</button>
-                        </form>
-                
-                
-                        <div class="messageL ">客服热线:000-100-9000</div>
-                        <div class="messageR ">加盟热线:000-000-9000</div>
-                      </div>
-                    </div>
-                  </div>
-                  <input type="button" id="subBtn" value="button">
-                
-    </form>
+
+  <form onsubmit="return false;">
+    <div class="form-group" id="f_1525837011964">
+      <div class="label">
+        <label for="f_username_txt">
+          用户名/账号
+        </label>
+      </div>
+      <div class="field">
+        <input type="text" class="input" id="f_username_txt" name="f_username_txt" maxlength="50" value="" data-validate="required:请填写用户名/账号,username:请输入英文字母开头的字母、下划线、数字,ajax#(demo/getdata.html?username={value}):该账号已存在,length#<50:字数在0-50个"
+          placeholder="英文字母开头的字母、下划线、数字">
+      </div>
+    </div>
+    <div class="form-group" id="f_1525837017430">
+      <div class="label">
+        <label for="f_mobile_txt">
+          手机号
+        </label>
+      </div>
+      <div class="field">
+        <input type="text" class="input" id="f_mobile_txt" name="f_mobile_txt" maxlength="11" value="" data-validate="required:请填写内容,mobile:请输入手机号码"
+          placeholder="输入手机号码">
+      </div>
+    </div>
+    <div class="form-group" id="f_1525837018572">
+      <div class="label">
+        <label for="f_qq_txt">
+          QQ号码
+        </label>
+      </div>
+      <div class="field">
+        <input type="text" class="input" id="f_qq_txt" name="f_qq_txt" maxlength="11" value="" data-validate="required:请填写QQ号码,qq:请输入QQ号码,如：1979788761,length#<11:字数在0-11个"
+          placeholder="请输入QQ号码">
+      </div>
+    </div>
+  </form>
+
+
+  </form>
 </body>
 
 </html>

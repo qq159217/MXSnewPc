@@ -2,21 +2,20 @@ $(function () {
 	$("#top").load("./site/common/common.html")
 
   // 導航欄
-  $('nav>ul .item').mouseenter(function () {
+  $('nav>ul .item').mousemove(function () {
     $(this).find('.sub-menu').show()
     $(this).siblings().find('.sub-menu').hide()
   })
 
-  $('#top_homepage').load('../site/common/common.html')
+//  全屏滚动
 
   $('#dowebok').fullpage({
-    menu: '#topNav',
+    // menu: '.topNav',
     css3: true,
-    scrollingSpeed: 700,
-    autoScrolling: true,
-    navigation: true,
-    lazyLoading:true,
-    parallax: true
+    menu:'#menu',
+    anchors:['firstPage', 'secondPage','thirdPage','fourthPage',"fifthPage","sixthPage"],
+    
+   
 
   })
 
