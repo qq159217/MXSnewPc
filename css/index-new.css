@@ -242,7 +242,7 @@ ul {
 }
 
 li.item:last-child {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .topNav .menu .item a {
@@ -375,8 +375,8 @@ li.item:last-child {
     margin-left: 123px;
 }
 
+margin-top: -7px;
 .section-03 .fl img {
-    margin-top: -5px;
 }
 
 .section-03 .top {
