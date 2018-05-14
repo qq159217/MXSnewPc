@@ -16,21 +16,20 @@ body {
 }
 
 /* 响应式布局 */
+
 @media only screen and (max-width: 1366px) {
-    body {
-        /* border:3px dashed #FF09FF;  */
-    }
     nav {
         margin-left: 20px;
     }
-   
     .menu .item {
         margin-right: 68px;
     }
-    .section-02 .fl img {
-        width: 434px;
-        /* height: 33.38rem; */
+    .section-02 .l img {
+        width: 392px;
         margin-right: 76PX;
+        position: absolute;
+        top: 336px;
+        left: 0
     }
     .section-02 .fl {
         margin-top: 240px;
@@ -42,20 +41,31 @@ body {
         background-color: #F3F8FA;
         border: #F6F8FA 1px solid;
         padding: 60px 52px 0 38px;
+        margin-top: 134px;
         box-sizing: border-box;
         font-size: 16px;
         line-height: 30px;
         color: #8E9091;
     }
-    .section-03 .fl img {
-        margin-top: -5px;
-        width: 386px;
+    .section-03 .mid .txt {
+        width: 252px;
     }
     /* 产品 */
-    .section-03 .mid .txt {
-        /* width: 340px; */
+    .section-03 .fl .ball_bottom {
+        width: 355px;
+        /* top: -19px; */
     }
-    /* 反馈界面 */
+    .section-03 .fr img {
+        margin-top: 25%;
+        /* margin-left: 30px; */
+        width: 486px;
+        top: 50%;
+        /* left: 35%; */
+        position: absolute;
+    }
+    .section-03 .line_3 {
+        height: 104px;
+    }
     .feedback textarea,
     .feedback .ipt {
         width: 332px;
@@ -65,27 +75,26 @@ body {
     }
     .feedback .submit {
         left: 110px;
-    top: -30px;
-    width: 60px;
-
+        top: -30px;
+        width: 60px;
     }
-    #container {width: 450px;
+    #container {
+        width: 450px;
     }
 }
 
 @media only screen and (min-width: 1366px) {
-  
     .menu .item {
         margin-right: 91px;
     }
-    .section-02 .fl img {
+    .section-02 .l img {
         width: 579px;
-        height: 33.38rem;
-        margin-right: 101PX;
+        height: 534px;
+        margin-top: 164px;
+        /* top: 30%; */
     }
     .section-02 .fl {
         margin-top: 111px;
-        /* background: url('../images/bj/ball-half.png'); */
     }
     .section-02 .content .fr {
         width: 593px;
@@ -94,12 +103,32 @@ body {
         background-color: #F3F8FA;
         border: #F6F8FA 1px solid;
         padding: 97px 52px 0 38px;
+        margin-top: 134px;
         box-sizing: border-box;
         font-size: 18px;
         line-height: 30px;
         color: #8E9091;
     }
     /* 产品 */
+    .section-03 .fl .ball_bottom {
+        width: 518px;
+        height: 130px;
+        /* top: -19px; */
+    }
+    .section-03 .fr img {
+        margin-top: 25%;
+        margin-left: 60px;
+        width: 664px;
+        top: 50%;
+        left: 690px;
+        position: absolute;
+    }
+    .section-03 .mid .txt {
+        width: 495px;
+    }
+    .section-03 .line_3 {
+        height: 54px;
+    }
     /* 反馈 */
     .feedback textarea,
     .feedback .ipt {
@@ -108,17 +137,15 @@ body {
     .feedback input {
         width: 370px;
     }
-    .feedback .submit{
+    .feedback .submit {
         position: relative;
-      left: 110px;
-    top: -26px;
+        left: 110px;
+        top: -26px;
     }
-
-    #container {width: 699px;
+    #container {
+        width: 699px;
     }
 }
-
-
 
 .conpanybj,
 .feedbackbj,
@@ -241,7 +268,7 @@ ul {
     color: #50e3c2
 }
 
-li.item:last-child {
+.menu li.item:last-child {
     margin-right: 20px;
 }
 
@@ -255,33 +282,37 @@ li.item:last-child {
 }
 
 .section {
-    min-height: 768px;
+    min-height: 600px;
+    /* border: #000 2px solid; */
 }
 
 /* 首页 */
 
 .section-01 .content {
     text-align: center;
+    margin: 0 auto;
 }
 
 .homepage h1 {
     font-size: 100px;
-    line-height: 138px;
-    height: 50px;
+    /* line-height: 138px; */
+    height: 138px;
     color: #26E5FF;
-    display: block;
-    position: relative;
-    top: -70px;
+    /* display: block; */
+    /* position: absolute; */
+    /* margin-top: -80px; */
     /* left: 27.31rem; */
     margin-bottom: 21px;
 }
 
 .homepage p {
-    display: block;
+    /* display: block; */
     font-size: 16px;
     font-weight: 400;
     height: 37px;
-    position: relative;
+    line-height: 37px;
+    margin-bottom: 136px;
+    /* position: absolute; */
     /* top: 13.31rem;
     left: 28.31rem; */
 }
@@ -290,11 +321,20 @@ li.item:last-child {
 
 .section-02 h3 {
     font-size: 34px;
-    height: 24px;
+    height: 34px;
+    line-height: 34px;
     font-weight: 300;
     margin-left: 49px;
-    margin-top: 94px;
+    margin-top: 91px;
     color: #525252;
+    position: absolute;
+}
+
+.section-02 .l img {
+    /* margin-top: 85px; */
+    position: absolute;
+    left: 0%;
+    /* top: 30%; */
 }
 
 .section-02 .content .fr .TEXT {
@@ -355,6 +395,12 @@ li.item:last-child {
 
 /* 产品介绍 */
 
+.section-03 .content {
+    position: absolute;
+    top: -387px;
+    left: 0;
+}
+
 .section-03 .fr {
     /* width: 41.5rem; */
     /* margin-top: 68px; */
@@ -362,9 +408,9 @@ li.item:last-child {
 }
 
 .fr img {
-    height: 700px;
-    margin-top: 71px;
-    width: 664px;
+    /* height: 700px; */
+    /*   margin-top: 71px;
+    width: 664px; */
 }
 
 .section-03 .fl {
@@ -375,13 +421,14 @@ li.item:last-child {
     margin-left: 123px;
 }
 
-margin-top: -7px;
-.section-03 .fl img {
+.section-03 .fl .ball_bottom {
+    /* position: absolute;
+    left: 0; */
+    /* top: -19px; */
+    /* margin-bottom: 120px; */
 }
 
 .section-03 .top {
-    /* width: 318px;
-    height: 87px; */
     vertical-align: middle;
     /* text-align: center; */
 }
@@ -407,7 +454,7 @@ margin-top: -7px;
     display: block;
     position: absolute;
     left: 174px;
-    top: 202px;
+    top: 215px
 }
 
 .section-03 .line_2 {
@@ -417,7 +464,7 @@ margin-top: -7px;
     margin-top: 34px;
     position: absolute;
     /* left: 209px; */
-    top: 202px;
+    top: 215px
 }
 
 .section-03 .mid {
@@ -427,7 +474,7 @@ margin-top: -7px;
 
 .section-03 .line_3 {
     width: 8px;
-    height: 54px;
+    /* height: 54px; */
     background-color: #084CCF;
     position: absolute;
     /* left: 209px; */
@@ -491,12 +538,13 @@ margin-top: -7px;
 
 .section-04 .content {
     margin: 0 auto;
-    padding-top: 124px;
+    /* padding-top: 124px; */
 }
 
 .section-04 .content .join {
     text-align: center;
     margin-bottom: 100px;
+    margin-top: 221px;
     padding-left: 43.5%;
 }
 
@@ -611,7 +659,7 @@ margin-top: -7px;
     border-radius: 5px;
     background-color: #32FFFF;
     position: relative;
-   /*  left: 1005px;
+    /*  left: 1005px;
     top: 545px; */
     cursor: pointer;
 }
@@ -735,7 +783,6 @@ p#connect {
 }
 
 #container {
-    
     height: 700px;
     margin-top: 68px;
     border: 2px solid #ECE5E0;

@@ -6,53 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-  <script src="./md5.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
-
-  <script src="./form.js"></script>
 </head>
 
 <body>
-
-  <form onsubmit="return false;">
-    <div class="form-group" id="f_1525837011964">
-      <div class="label">
-        <label for="f_username_txt">
-          用户名/账号
-        </label>
-      </div>
-      <div class="field">
-        <input type="text" class="input" id="f_username_txt" name="f_username_txt" maxlength="50" value="" data-validate="required:请填写用户名/账号,username:请输入英文字母开头的字母、下划线、数字,ajax#(demo/getdata.html?username={value}):该账号已存在,length#<50:字数在0-50个"
-          placeholder="英文字母开头的字母、下划线、数字">
-      </div>
-    </div>
-    <div class="form-group" id="f_1525837017430">
-      <div class="label">
-        <label for="f_mobile_txt">
-          手机号
-        </label>
-      </div>
-      <div class="field">
-        <input type="text" class="input" id="f_mobile_txt" name="f_mobile_txt" maxlength="11" value="" data-validate="required:请填写内容,mobile:请输入手机号码"
-          placeholder="输入手机号码">
-      </div>
-    </div>
-    <div class="form-group" id="f_1525837018572">
-      <div class="label">
-        <label for="f_qq_txt">
-          QQ号码
-        </label>
-      </div>
-      <div class="field">
-        <input type="text" class="input" id="f_qq_txt" name="f_qq_txt" maxlength="11" value="" data-validate="required:请填写QQ号码,qq:请输入QQ号码,如：1979788761,length#<11:字数在0-11个"
-          placeholder="请输入QQ号码">
-      </div>
-    </div>
-  </form>
-
-
+  <form action="">
+    <label for="">电话号码</label>
+    <input type="text" name="ph" id="ph">
+    <button id="btn" type="button">点击我我我我</button>
   </form>
 </body>
 
 </html>
+
+<script>
+  $(function () {
+ function checktel(s, name) {
+        str = $("#" + s).val();
+        var reg = /^[0-9-+()]*$/;
+        if (!reg.test(str)) {
+          msg = name + "请输入正确的号码格式";
+          alert(msg);
+          return false;
+        } else {
+          return true;
+        }
+      }
+    $("#btn").click(function () {
+    //  alert("哈哈")
+
+      checktel("ph")
+    })
+
+
+  })
+</script>
