@@ -4,6 +4,24 @@ html {
     font-size: 16px;
 }
 
+
+body {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    font-size: 14px;
+    /* overflow: hidden; */
+    margin: 0 auto;
+}
+
 body,
 ul,
 h1,
@@ -21,7 +39,6 @@ span {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    /* font-family: "PingFangSC-Thin"; */
     font-family: 'PingFangEL11b013ef831cab3';
 }
 
@@ -70,7 +87,6 @@ h2 {
     font-size: 36px;
     text-align: center;
     font-family: PingFangSC-Medium;
-    /* font-weight: bold; */
 }
 
 .bot {
@@ -96,19 +112,16 @@ input {
     appearance: none;
 }
 
-input:focus {
-    /* background-color: red; */
-}
 
 .mxs_container {
-    /* width:1366px; */
     margin: 0 auto;
     position: relative;
+    width:1366px;
 }
 
-/* input:-webkit-autofill { 
-    -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,1) inset; 
-    } */
+.section {
+    min-height: 700px;
+}
 
 @media only screen and (max-width: 1366px) {
     .mxs_container {
@@ -120,4 +133,84 @@ input:focus {
     .mxs_container {
         width:1366px;
     }
+}
+
+
+/* 导航栏 */
+nav a {
+    text-decoration: none
+}
+
+nav>ul>li {
+    float: left;
+    text-align: center
+}
+
+nav li ul.sub-menu {
+    display: none;
+    padding-left: 0 !important
+}
+
+.sub-menu li {
+    color: #373a39
+}
+
+ul {
+    list-style: none
+}
+
+.item .sub-menu li {
+    margin-top: 16px
+}
+
+.topNav {
+    width: 100%;
+    height: 68px;
+    z-index: 20000;
+}
+
+.topNav-fixed {
+    width: 100%;
+    position: fixed
+}
+
+.topNav .menu .fl .logo {
+    float: left;
+    display: block;
+    width: 49px;
+    height: 46px;
+    margin: 10px 0 12px 35px
+}
+
+.topNav .menu .fl p {
+    margin: 18px 0 0 12px;
+    font-size: 24px;
+    color: #357b8b;
+    height: 37px;
+    line-height: 33px;
+    display: block
+}
+
+.topNav .menu a:hover {
+    color: #6db3fa;
+    display: block;
+    border-bottom: 5px solid #50e3c2;
+    text-align: center
+}
+
+.menu .item {
+    height: 17px;
+    font-size: 14px;
+    float: left;
+    /* margin-right: 91px; */
+    margin-top: 28px;
+    color: #50e3c2
+}
+
+.menu li.item:last-child {
+    margin-right: 20px;
+}
+
+.topNav .menu .item a {
+    color: #373a39
 }

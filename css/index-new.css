@@ -1,20 +1,3 @@
-body {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    font-size: 14px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
 /* 响应式布局 */
 
 @media only screen and (max-width: 1366px) {
@@ -27,7 +10,6 @@ body {
     .section-02 .l img {
         width: 392px;
         margin-right: 76PX;
-        position: absolute;
         top: 336px;
         left: 0
     }
@@ -50,17 +32,18 @@ body {
     .section-03 .mid .txt {
         width: 252px;
     }
-    /* 产品 */
+    .section-03 .content {
+        top: -272px;
+    }
     .section-03 .fl .ball_bottom {
-        width: 355px;
-        /* top: -19px; */
+        width: 349px;
     }
     .section-03 .fr img {
         margin-top: 25%;
-        /* margin-left: 30px; */
+        margin-left: 20%;
         width: 486px;
-        top: 50%;
-        /* left: 35%; */
+        top: 20%;
+        left: 35%;
         position: absolute;
     }
     .section-03 .line_3 {
@@ -90,7 +73,7 @@ body {
     .section-02 .l img {
         width: 579px;
         height: 534px;
-        margin-top: 164px;
+        margin-top: 183px;
         /* top: 30%; */
     }
     .section-02 .fl {
@@ -103,25 +86,27 @@ body {
         background-color: #F3F8FA;
         border: #F6F8FA 1px solid;
         padding: 97px 52px 0 38px;
-        margin-top: 134px;
+        margin-top: 64px;
         box-sizing: border-box;
         font-size: 18px;
         line-height: 30px;
         color: #8E9091;
     }
     /* 产品 */
+    .section-03 .content {
+        top: -55px;
+    }
     .section-03 .fl .ball_bottom {
         width: 518px;
         height: 130px;
         /* top: -19px; */
     }
     .section-03 .fr img {
-        margin-top: 25%;
         margin-left: 60px;
         width: 664px;
-        top: 50%;
+        height: 550px;
         left: 690px;
-        position: absolute;
+        margin-top: 11%;
     }
     .section-03 .mid .txt {
         width: 495px;
@@ -160,37 +145,31 @@ body {
 .homepagebj {
     opacity: 1;
     background-image: url("../images/common/banner.png");
-    background-repeat: no-repeat;
 }
 
 .joinbj {
     opacity: 1;
     background-image: url("../images/bj/join.png");
-    background-repeat: no-repeat;
 }
 
 .feedbackbj {
     opacity: 1;
     background-image: url("../images/bj/feedback.png");
-    background-repeat: no-repeat;
 }
 
 .conpanybj {
     opacity: 1;
     background-image: url("../images/bj/ball.png");
-    background-repeat: no-repeat;
 }
 
 .warebj {
     opacity: 1;
     background-image: url('../images/coffeetree.png');
-    background-repeat: no-repeat;
 }
 
 .prodbj {
     opacity: 1;
     background-image: url("../images/common/cafemaker-full.jpg");
-    background-repeat: no-repeat;
 }
 
 .container {
@@ -198,92 +177,9 @@ body {
     position: relative
 }
 
-nav a {
-    text-decoration: none
-}
-
-nav>ul>li {
-    float: left;
-    text-align: center
-}
-
-nav li ul.sub-menu {
-    display: none;
-    padding-left: 0 !important
-}
-
-.sub-menu li {
-    color: #373a39
-}
-
-ul {
-    list-style: none
-}
-
-.item .sub-menu li {
-    margin-top: 16px
-}
-
-.topNav {
-    width: 100%;
-    height: 68px;
-    z-index: 20000;
-}
-
-.topNav-fixed {
-    width: 100%;
-    position: fixed
-}
-
-.topNav .menu .fl .logo {
-    float: left;
-    display: block;
-    width: 49px;
-    height: 46px;
-    margin: 10px 0 12px 35px
-}
-
-.topNav .menu .fl p {
-    margin: 18px 0 0 12px;
-    font-size: 24px;
-    color: #357b8b;
-    height: 37px;
-    line-height: 33px;
-    display: block
-}
-
-.topNav .menu a:hover {
-    color: #6db3fa;
-    display: block;
-    border-bottom: 5px solid #50e3c2;
-    text-align: center
-}
-
-.menu .item {
-    height: 17px;
-    font-size: 14px;
-    float: left;
-    /* margin-right: 91px; */
-    margin-top: 28px;
-    color: #50e3c2
-}
-
-.menu li.item:last-child {
-    margin-right: 20px;
-}
-
-.topNav .menu .item a {
-    color: #373a39
-}
-
 .container {
     position: relative;
     width: 100%
-}
-
-.section {
-    min-height: 600px;
-    /* border: #000 2px solid; */
 }
 
 /* 首页 */
@@ -294,27 +190,21 @@ ul {
 }
 
 .homepage h1 {
-    font-size: 100px;
+    font-size: 60px;
     /* line-height: 138px; */
     height: 138px;
     color: #26E5FF;
-    /* display: block; */
-    /* position: absolute; */
-    /* margin-top: -80px; */
-    /* left: 27.31rem; */
+   
     margin-bottom: 21px;
 }
 
 .homepage p {
-    /* display: block; */
+ 
     font-size: 16px;
     font-weight: 400;
     height: 37px;
     line-height: 37px;
     margin-bottom: 136px;
-    /* position: absolute; */
-    /* top: 13.31rem;
-    left: 28.31rem; */
 }
 
 /* 公司简介 */
@@ -325,16 +215,14 @@ ul {
     line-height: 34px;
     font-weight: 300;
     margin-left: 49px;
-    margin-top: 91px;
+    margin-top: 24px;
     color: #525252;
     position: absolute;
 }
 
 .section-02 .l img {
-    /* margin-top: 85px; */
     position: absolute;
     left: 0%;
-    /* top: 30%; */
 }
 
 .section-02 .content .fr .TEXT {
@@ -396,15 +284,12 @@ ul {
 /* 产品介绍 */
 
 .section-03 .content {
-    position: absolute;
-    top: -387px;
+    position: relative;
     left: 0;
 }
 
 .section-03 .fr {
-    /* width: 41.5rem; */
-    /* margin-top: 68px; */
-    /* margin-left: 85px; */
+  
 }
 
 .fr img {
@@ -463,7 +348,7 @@ ul {
     background-color: #3281B3;
     margin-top: 34px;
     position: absolute;
-    /* left: 209px; */
+  
     top: 215px
 }
 
@@ -510,6 +395,7 @@ ul {
     width: 37px;
     height: 18px;
     margin-right: 4px;
+    margin-bottom: 9px;
 }
 
 .section-03 .fl .bottom a h4 {
@@ -750,7 +636,6 @@ textarea:-moz-placeholder {
 .section-06 .left .tindent {
     text-indent: 20px;
     height: 48px;
-    /* height: 30px; */
 }
 
 .section-06 .left .tindent,
@@ -773,7 +658,6 @@ p#connect {
     height: 60px;
     color: #FCBB08;
     background-image: url("../images/common/icon.png");
-    /* background-repeat: no-repeat;  */
     background-size: 56px 60px;
     cursor: pointer;
 }
@@ -783,7 +667,7 @@ p#connect {
 }
 
 #container {
-    height: 700px;
+    height: 600px;
     margin-top: 68px;
     border: 2px solid #ECE5E0;
     overflow: hidden;

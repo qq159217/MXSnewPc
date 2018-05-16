@@ -1,5 +1,5 @@
 $(function () {
-  $('#top').load('./site/common/common.html')
+//   $('#top').load('./site/common/common.html')
 
   // 導航欄
   $('nav>ul .item').mousemove(function () {
@@ -12,9 +12,17 @@ $(function () {
   $('#dowebok').fullpage({
     // menu: '.topNav',
     css3: true,
-    menu: '#menu',
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage']
-
+    verticalCentered:true,
+    scrollingSpeed:300,
+    menu: true,
+    // navigation:true,
+    navigationTooltips:[],
+    // anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+    loopBottom:true,
+    // loopTop:true,
+    autoScrolling:true,
+    lazyLoading: true,
+    // responsiveHeight:900
 
 
   })
@@ -61,7 +69,7 @@ $("#feedbackBtn").click(function () {
         },
 
         error: function (response) {
-            console.log("error" + "亲,重新尝试")
+            console.log("error" + "请,重新尝试")
 
 
         }
