@@ -2,6 +2,8 @@
     position: relative;
     top: 111px;
     left: 45px;
+    overflow: hidden;
+    font-family:' PingFangSC-Thin';
 }
 
 .mxs_container {
@@ -32,7 +34,7 @@
 }
 
 .m .line {
-    margin-left: 60px;
+    margin-left: 70px;
 }
 
 .text {
@@ -77,7 +79,7 @@
 }
 
 .r .line {
-    margin-left: 120px;
+    margin-left: 75px;
 }
 .r h2 {
     margin-left: -292px;

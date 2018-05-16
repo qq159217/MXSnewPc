@@ -1,5 +1,5 @@
 $(function () {
-//   $('#top').load('./site/common/common.html')
+  $('#top').load('./site/common/common.html')
 
   // 導航欄
   $('nav>ul .item').mousemove(function () {
@@ -22,7 +22,7 @@ $(function () {
     // loopTop:true,
     autoScrolling:true,
     lazyLoading: true,
-    // responsiveHeight:900
+    // responsiveHeight:800
 
 
   })
