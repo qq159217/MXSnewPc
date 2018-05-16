@@ -1,19 +1,14 @@
 /* 响应式布局 */
 
 @media only screen and (max-width: 1366px) {
-    nav {
-        margin-left: 20px;
-    }
-    .menu .item {
-        margin-right: 68px;
-    }
+  
     .section-02 h3{
-        margin-top: 94px;
+        margin-top: 64px;
     }
     .section-02 .l img {
         width: 392px;
         margin-right: 76PX;
-        top: 336px;
+        top: 375px;
         left: 0
     }
     .section-02 .fl {
@@ -36,7 +31,7 @@
         width: 252px;
     }
     .section-03 .content {
-        top: -0px;
+        top: -105px;
     }
     .section-03 .fl .ball_bottom {
         width: 349px;
@@ -45,9 +40,9 @@
         margin-top: 25%;
         margin-left: 20%;
         width: 486px;
-        top: 20%;
+        /* top: 20%; */
         left: 35%;
-        position: absolute;
+        /* position: absolute; */
     }
     .section-03 .line_3 {
         height: 104px;
@@ -70,16 +65,14 @@
 }
 
 @media only screen and (min-width: 1366px) {
-    .menu .item {
-        margin-right: 91px;
-    }
+    
     .section-02 h3{
         margin-top: 50px;
     }
     .section-02 .l img {
         width: 579px;
         height: 534px;
-        margin-top: 127px;
+        margin-top: 146px;
         /* top: 30%; */
     }
     .section-02 .fl {

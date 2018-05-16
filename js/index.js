@@ -22,7 +22,7 @@ $(function () {
     // loopTop:true,
     autoScrolling:true,
     lazyLoading: true,
-    // responsiveHeight:800
+    responsiveHeight:500
 
 
   })

@@ -1,140 +1,145 @@
 .coffee {
-    position: relative;
-    top: 96px;
+position: relative;
+top: 96px;
 }
 
 .coffee .top {
-    padding-left: 76px;
+padding-left: 76px;
 }
 
 .coffee .top h2 {
-    text-align: left;
-    font-weight: 500;
-    margin-left: 60px;
+text-align: left;
+font-weight: 500;
+margin-left: 60px;
 }
 
 h4 {
-    margin-top: 10px;
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
+margin-top: 10px;
+font-size: 20px;
+color: black;
+font-weight: bold;
 }
 
 .coffeebj {
-   
-    z-index: 1000;
-    /* min-height: 768px; */
-    /* padding-top: 150px; */
-    background: url('../images/common/coffeebj.jpg')  no-repeat center  center ;
-    opacity: 0.65;
-    position: relative;
-    left: 0;
-    top: 0;
-    
+
+z-index: 1000;
+/* min-height: 768px; */
+/* padding-top: 150px; */
+background: url('../images/common/coffeebj.jpg')  no-repeat center  center ;
+opacity: 0.65;
+position: relative;
+left: 0;
+top: 0;
+
 }
 
 /* /轮播图样式 */
 
 .bottom {
-    padding-left: 41px;
+padding-left: 41px;
 }
 
 h1 {
-    margin: 30px 0;
-    font-size: 26px;
-    text-align: center;
+margin: 30px 0;
+font-size: 26px;
+text-align: center;
 }
 
 p {
-    font-size: 14px;
+font-size: 14px;
 }
 
 hr {
-    margin: 50px 0;
+margin: 50px 0;
 }
 
 #marquee2 {
-    padding: 11px 112px;
-    margin: 50px 0 20px;
-    z-index: 9999;
+padding: 11px 112px;
+margin: 50px 0 20px;
+z-index: 9999;
 }
 
 #marquee2 .content {
-    overflow: hidden;
-    width: 100%;
-    height: 350px;
+overflow: hidden;
+width: 100%;
+height: 350px;
 }
 
 #marquee2 .content ul {
-    zoom: 1;
-    margin-left: -10px;
+zoom: 1;
+margin-left: -10px;
 }
 
 #marquee2 .content li {
-    float: left;
-    display: inline;
-    width: 230px;
-    height: 350px;
-    /* padding-left: 10px; */
-    margin-right: 48px;
+float: left;
+display: inline;
+width: 230px;
+height: 350px;
+/* padding-left: 10px; */
+margin-right: 48px;
 }
 
 #marquee2 .content li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    text-align: center;
+display: block;
+width: 100%;
+height: 100%;
+text-decoration: none;
+text-align: center;
 }
 
 #marquee2 .content li a img {
-    display: block;
-    height: 240px;
-    width: 240px;
-    /* height: 100%; */
-    vertical-align: baseline;
-    position: relative;
+display: block;
+height: 240px;
+width: 240px;
+/* height: 100%; */
+vertical-align: baseline;
+position: relative;
 }
 
 #marquee2 .btn a {
-    position: absolute;
-    top: 50%;
-    width: 24px;
-    height: 43px;
-    margin-top: -25px;
-    background: url(images/slide_arrow3_prev.png) no-repeat 0 0;
-    cursor: pointer;
-    outline: none;
+position: absolute;
+top: 50%;
+width: 24px;
+height: 43px;
+margin-top: -25px;
+background: url(images/slide_arrow3_prev.png) no-repeat 0 0;
+cursor: pointer;
+outline: none;
 }
 
 #marquee2 .btn .btnPrev {
-    left: 80px;
+left: 80px;
 }
 
 #marquee2 .btn .btnPrev img,
 #marquee2 .btn .btnNext img {
-    width: 48px;
-    height: 48px;
-    position: relative;
-    left: 10px;
+width: 48px;
+height: 48px;
+position: relative;
+left: 10px;
 }
 
 #marquee2 .btn .btnNext img {
-    left: -110px;
+left: -110px;
 }
 
 #marquee2 .btn .btnNext {
-    right: 0;
-    background: url(images/slide_arrow3_next.png) no-repeat 0 0;
+right: 0;
+background: url(images/slide_arrow3_next.png) no-repeat 0 0;
 }
 
 /* round:url(images/square3_3_333333.png) no-repeat 0 center;
 } */
 
 .j_slideLists li a h5 {
-    font-weight: 700;
-    color: #000;
-    font-size: 20px;
-    /* margin-right: 20px; */
+font-weight: 700;
+color: #000;
+font-size: 20px;
+/* margin-right: 20px; */
 }
-.
+@media only screen and (max-width: 1366px) {
+
+#marquee2 .btn .btnNext img{
+left: -76px;
+}
+}

@@ -38,9 +38,8 @@
 }
 
 .text {
-    padding-top: 40px;
-    padding-left: 26px;
-    /* box-sizing: border-box; */
+    padding: 20px 30px;
+    box-sizing: border-box;
     width: 372px;
     height: 331px;
     opacity: 0.62;
@@ -59,6 +58,7 @@
     background-color: #fff;
     width: 372px;
     height: 371px;
+    padding: 0 5px ;
 }
 
 .line {
